@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+     <!-- Hamburger Menu -->
+     <input type="checkbox" class="checkbox" hidden id="click">
+     <div class="animation">
+       <div class="hamburger-icon">
+         <label for="click">
+           <span class="line line-1"></span>
+           <span class="line line-2"></span>
+           <span class="line line-3"></span>
+         </label>
+       </div>
+     </div>
+ 
+     <!-- Navigation -->
+     <div class="topnav">
+       <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+       <a href="blog.html">Blog</a>
+       <a href="contact.html">Contact</a>
+       </div>
+
+       <main>
+        <div class="contact-wrapper">
+          
+          <form action="#" id="contactForm" onsubmit="return validateForm();"> 
+
+            <h3>Contact us</h3>
+
+            <h4>Contact us today and get reply within 24 hours!</h4>
+
+            <div id="errorMessage"></div>
+            <div class="input-field">
+              <input type="text" id="name" placeholder="Full Name">
+            </div>
+
+            <div class="input-field">
+              <input type="text" id="email" placeholder="Email Address">
+            </div>
+
+            <div class="input-field">
+              <input type="text" id="address" placeholder="Address">
+            </div>
+
+            <div class="input-field">
+              <textarea placeholder="Message" id="message"></textarea>
+            </div>
+
+            <div>
+              <input type="submit" onclick="resetForm()">
+            </div>
+         
+          </form>
+  
+          </div>
+      </main>
+    
+</body>
+</html>
