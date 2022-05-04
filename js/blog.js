@@ -1,7 +1,7 @@
 const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&_embed";
-const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?page=2"
+const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&_embed&page=2" 
 const blogContainer = document.querySelector(".blog-container");
-const viewMoreBtn = document.querySelector("#viewmore-btn");
+const viewMoreBtn = document.querySelector("#view-btn");
 
 async function fetchBlogs(url) {
     try {
