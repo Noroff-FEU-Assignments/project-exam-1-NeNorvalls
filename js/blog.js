@@ -1,4 +1,4 @@
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard";
+const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&_embed";
 const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?page=2"
 const blogContainer = document.querySelector(".blog-container");
 const viewMoreBtn = document.querySelector("#viewmore-btn");
@@ -24,13 +24,15 @@ function createBlogs(blogpost) {
     
     blogpost.forEach(function(blog) {
         blogContainer.innerHTML += `
-        <div class="blogpost-bg" style="background-image: url('${blog.acf.images}')"></div>
-        <div class="title-container">
-            <h2 class="blog-title">${blog.title.rendered}</h2>
+        <div class="column">
+        <div class="bg-img" style="background-image: url(${blog.acf.images})"></div>
+            <div class="title-container">
+                <h2 class="blog-title">${blog.title.rendered}</h2>
+                <a href="details.html?id=${blog.id} id="readmore-btn">Read more</a>
+            </div>
+
         </div>
-        <div class="btn-container"
-            <a href="details.html?id=${blog.id} class="readmore-btn">Read more</a>
-        </div>
+        
         `
         
     })
@@ -49,7 +51,6 @@ viewMoreBtn.onclick = function() {
 
 
 
-// <img src="${blog.acf.images}" class="blog-img">
 
 
 

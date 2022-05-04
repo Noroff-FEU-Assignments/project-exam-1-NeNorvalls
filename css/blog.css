@@ -1,34 +1,49 @@
 @import "/css/styles.css";
 
-.main {
-    display: flex;
-    max-width: 1200px;
+ main {
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
 }
 
-.blog-container {
-    display: grid;
-    grid-template-columns: 600px 600px;
+.row {
+    width: 100%;
+}
+.column {
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    
 }
 
-.blogpost-bg {
-    background-size: contain;
+.bg-img {
+    margin: 0 auto;
+    width: 80%;
+    min-height: 300px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 400px;
-    /* padding-bottom: 18%; */
-    margin-bottom: 2%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-/* .blog-img {
-    width: 100%;
-    height: auto;
-} */
-
-.btn-container {
+.title-container {
     display: flex;
-    position: relative;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 10px auto;
+    /* max-width: 80%; */ 
 }
+.blog-title {
+    max-width: 700px;
+    margin: 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* WORKING .blog-img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
