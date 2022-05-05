@@ -1,108 +1,45 @@
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&_embed";
-const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?page=2"
-const blogContainer = document.querySelector(".blog-container");
-const viewMoreBtn = document.querySelector("#viewmore-btn");
+const blogContainer = document.querySelector(".blog-content-container");
 
-async function fetchBlogs(url) {
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+
+// const contentURL = `https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&_embed/${id}`;
+const contentURL = `https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed${id}`;
+async function getBlog() {
     try {
-        const response = await fetch(url);
-        const blogs = await response.json();
-        console.log(blogs);
-        createBlogs(blogs);
-    } catch (error) {
+        const response = await fetch(contentURL)
+        const content = await response.json();
+        console.log(content);
+        // newPageTitle(content);
+        createHTML(content);
+    }
+    catch(error) {
         console.log(error);
-        blogContainer.classList.remove("loader");
-        blogContainer.innerHTML = errorMessage("Failed to fetch blogs", "error");
-        viewMoreBtn.style.display = "none";
+        blogContainer.innerHTML = message("Failed to display blogs", "error");
     }
 }
 
-fetchBlogs(url);
+getBlog();
 
-function createBlogs(blogpost) {
-    blogContainer.classList.remove("loader")
-    
-    blogpost.forEach(function(blog) {
-        blogContainer.innerHTML += `
-        <div class="column">
-        <div class="bg-img" style="background-image: url(${blog.acf.images})"></div>
-            <div class="title-container">
-                <h2 class="blog-title">${blog.title.rendered}</h2>
-                
-                <a href="details.html?id=${blog.id} id="readmore-btn">Read more</a>
-            </div>
+    function newPageTitle(blog) {
+        document.title = `${blog.title.rendered}`;
+    }
+ 
 
-        </div>
+    function createHTML(blog) {
         
-        `
-        
-    })
+        blogContainer.classList.remove("loader");
 
-
+        blogContainer.innerHTML = ` <h1>${blog[0].title.rendered}</h1>
+                                <div class="content-img-container">
+                                    <img class="blog-content-img" src="${blog[0].acf.images}">
+                                </div>
+                                <div class="content-text-container">
+                                    <p class="content-text">${blog[0].content.rendered}</p>
+                                    <p><span class="content-info"Category: ${blog.name}</span></p>
+                                    <p><span class="content-info"Author: ${blog[0].author.rendered}</span></p>
+                                    <p><span class="content-info"Date: ${blog[0].date}</span></p>
+                                </div>`
+                                             
 }
-viewMoreBtn.onclick = function() {
-    fetchBlogs(page);
-    viewMoreBtn.style.display = "none";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const blogContainer = document.querySelector(".blog-details");
-
-// const queryString = document.location.search;
-
-// const params = new URLSearchParams(queryString);
-
-// const id = params.get("id");
-
-
-// const detailsURL = "https://nenorvalls.no/flower-power/gamehub/wp-json/wc/v3/products/" + id;
-
-// const key = "?consumer_key=ck_6131069f7cf8fe34078860b7f32de680257422f1&consumer_secret=cs_81c77c45ce7a85e90c9f21bc157818964c403cc3"
-
-
-// async function getBlog() {
-
-//     try {
-//         const response = await fetch(detailsURL + key)
-
-//         const details = await response.json();
-
-//         const newPageTitle = document.querySelector("title");
-
-//         newPageTitle.innerHTML = `${details.name}`;
-
-//         createHTML(details);
-//     }
-//     catch(error) {
-//         console.log(error);
-//         gameContainer.innerHTML = message("error", "An error occured", error);
-//     }
-// }
-
-// getBlog();
-
-// function createHTML(blog) {
-
-//     blogContainer.innerHTML = ` <h1>${blog.name}</h1>
-//                                 <div class="details-container">
-//                                     <img class="blog-details-thumb" src="${blog.images[0].src}" alt="${blog.title}">
-//                                 </div>
-//                                 <div class="blog-info-container">
-//                                     <p class="blog-info">${blog.short_description}</p>
-//                                     <p><span class="blog-info"Genre: ${blog.genre}</span></p>
-//                                 </div> `
-// }

@@ -1,4 +1,4 @@
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&_embed";
+const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed";
 const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&_embed&page=2" 
 const blogContainer = document.querySelector(".blog-container");
 const viewMoreBtn = document.querySelector("#view-btn");
@@ -12,7 +12,7 @@ async function fetchBlogs(url) {
     } catch (error) {
         console.log(error);
         blogContainer.classList.remove("loader");
-        blogContainer.innerHTML = errorMessage("Failed to fetch blogs", "error");
+        blogContainer.innerHTML = errorMessage("Failed to display blogs", "error");
         viewMoreBtn.style.display = "none";
     }
 }
