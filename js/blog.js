@@ -28,7 +28,7 @@ function createBlogs(blogpost) {
         <div class="bg-img" style="background-image: url(${blog.acf.images})"></div>
             <div class="title-container">
                 <h2 class="blog-title">${blog.title.rendered}</h2>
-                <a href="details.html?id=${blog.id} id="readmore-btn">Read more</a>
+                <a href="details.html?id=${blog.id}" id="readmore-btn">Read more</a>
             </div>
 
         </div>
