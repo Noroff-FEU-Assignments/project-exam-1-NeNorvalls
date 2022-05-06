@@ -3,71 +3,31 @@
 @import url(/css/blog.css);
 @import url(/css/category.css);
 
+/* Universal styles */
 * {
     box-sizing: border-box;
     margin: 0;
     font-family: Nirmala UI;
 }
 
+
 body {
     background-color: #FFDCDA;
 }
 
-/* HERO */
+/* general layout style */
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* HERO homepage */
 .bg-text {
     color: black;
     font-size: 36px;
     font-weight: 500;
     letter-spacing: 1.5px;
     margin-top: -9em;
-}
-
-/* .btn-container {
-    display: flex;
-    justify-content: center;
-} */
-
-/* <!-- HTML !-->
-<button class="button-34" role="button">Button 34</button> */
-
-/* CSS */
-#view-btn {
-    display: block;
-  background: #290a5c;
-  border-radius: 999px;
-  box-shadow: #290a5c 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 18px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
-}
-
-
-.view-btn-container {
-    text-align: center;
-}
-
-.view-btn-container{
-    margin-bottom: -4rem;
-}
-
-
-.blog-btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #top-btn {
@@ -81,7 +41,6 @@ body {
 }
 
 /* Footer */
-
 footer {
     margin-top: 9em;
 }
@@ -113,4 +72,3 @@ span a {
 .social-media, .copy-container {
     text-align: center;
 }
-

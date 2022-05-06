@@ -1,89 +1,59 @@
+const carouselContainer = document.querySelector(".carousel-container");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const blogContainer = document.querySelector(".results");
-
-// const blogURL = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard";
+const blogUrl = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed";
 
 // const corsFix = "https://noroffcors.herokuapp.com/"
 
 // const corsUrl = corsFix + blogsURL;
 
-// async function fetchBlog() {
 
-// 	try {
-// 		const response = await fetch(corsUrl, {
-// 			// "method": "GET",
-// 			// "headers": {
-// 			// "x-rapidapi-host": "mmo-games.p.rapidapi.com",
-// 			// "x-rapidapi-key": "e571381396mshbf0c399aa256715p147efcjsn84b2bc11dfa5"
-// 		}});
+async function fetchBlogs(url) {
 
-// 		const json = await response.json();
+    try {
+        const response = await fetch(url);
 
-// 		console.log(json);
+        const blogs = await response.json();
 
-// 		blogContainer.innerHTML = "";
+        console.log(blogs);
 
-// 		const blog = json;
+        createBlogs(blogs);
 
-// 		for (let i = 0; i < blog.length; i++) {
+    } catch (error) {
 
-// 			if (i === 9) {
-// 				break;
-// 			}
-// 			blogContainer.innerHTML += `<a href="details.html?id=${blog[i].id}" class="card">
-// 											<div class="grid-container">
-// 												<img class="blog-thumb" src="${blog[i].images[0].src}"/>
-// 		   									</div>
-// 		   									<div class="blog-details">
-// 			   									<h4 class="blog-title">${blog[i].name}</h4>
-// 			   									<p class="blog-info">${blog[i].categories[0].name}</p>
-// 			   									<p class="blog-info">${blog[i].tags[0].name}</p>
-// 		   									</div>
-// 	   									</a>`;
-// 		};
-// 	}
-// 	catch(error) {
-// 		console.log(error);
-// 		blogContainer.innerHTML = message("error", "Something went wrong!", error);
-// 	}
-// }
+        console.log(error);
 
-// fetchBlog();
+        blogContainer.classList.remove("loader");
+
+        blogContainer.innerHTML = errorMessage("Failed to display blogs", "error");
+
+        viewMoreBtn.style.display = "none";
+    }
+}
+
+fetchBlogs(url);
+
+
+function createBlogs(blogpost) {
+    blogContainer.classList.remove("loader")
+    
+    blogpost.forEach(function(blog) {
+        blogContainer.innerHTML += `
+        <div class="column">
+        <div class="bg-img" style="background-image: url(${blog.acf.images})"></div>
+            <div class="title-container">
+                <h2 class="blog-title">${blog.title.rendered}</h2>
+                <a href="details.html?id=${blog.id}" id="readmore-btn">Read more</a>
+            </div>
+
+        </div>
+        
+        `
+        
+    })
+
+
+}
+viewMoreBtn.onclick = function() {
+    fetchBlogs(page);
+    viewMoreBtn.style.display = "none";
+}
