@@ -80,3 +80,13 @@
     justify-content: center;
     align-items: center;
 }
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 767px) {
+    /* one column layout */
+    .column {
+        width: 100%;
+    }
+}
+
