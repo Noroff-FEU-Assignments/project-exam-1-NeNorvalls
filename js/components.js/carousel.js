@@ -1,128 +1,54 @@
-/* CAROUSEL */
+const buttonContainer = document.querySelector(".map");
+const innerContainer = document.querySelector(".inner");
+const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=9";
 
-const sliders = document.querySelector(".carouselbox");
-var scrollPerClick;
-
-var imagePadding = 20
-
-blogData();
-
-var scrollAmount = 0
-
-function sliderScrollLeft() {
-    sliders.scrollTo({
-        top: 0,
-        left: (scrollAmount -= scrollPerClick),
-        behavior: "smooth",
-    });
-
-    if(scrollAmount < 0) {
-        scrollAmount = 900
+buttonContainer.addEventListener("click", e => {
+  if (e.target.nodeName === "BUTTON") {
+    Array.from(buttonContainer.children).forEach(item =>
+      item.classList.remove("active")
+    );
+    if (e.target.classList.contains("first")) {
+      innerContainer.style.transform = "translateX(-0%)";
+      e.target.classList.add("active");
+    } else if (e.target.classList.contains("second")) {
+      innerContainer.style.transform = "translateX(-33.33333333333333%)";
+      e.target.classList.add("active");
+    } else if (e.target.classList.contains('third')){
+      innerContainer.style.transform = 'translateX(-66.6666666667%)';
+      e.target.classList.add('active');
     }
-}
+  }
+});
 
-function sliderScrollRight() {
-    if(scrollAmount <= sliders.scrollWidth - sliders.clientWidth) {
-        sliders.scrollTo({
-            top: 0,
-            left: (scrollAmount += scrollPerClick),
-            behavior: "smooth",
-        });
+ document.addEventListener('DOMContentLoaded', ()=> {
+
+    async function fetchBlogs(url) {
+        try {
+            const response = await fetch(url);
+            const blogs = await response.json();
+            console.log(blogs);
+            createBlogs(blogs);
+        } catch (error) {
+            console.log(error);
+        }
     }
-}
+     
+    fetchBlogs(url);
+    
+    function createBlogs(blogpost) {
+    
+        
+        blogpost.forEach(function(blog) {
+            innerContainer.innerHTML += 
+                                 `<a id="carousel-link" href="details.html?id=${blog.id}"
+                                    <div class="card">
+                                        <img src="${blog.acf.images}">
+                                        <div class="content">
+                                            <h1 class="carousel-h1">${blog.title.rendered}</h1>
+                                        </div>
+                                    </div>
+                                  </a>`
+            
+        })
+    }});
 
-
-async function blogData() {
-    const api = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&sort_by=latest";
-
-    var result = await fetch(api)
-        .then((response) => {
-            return response.json();
-        });
-
-    result.map(function(blog) {
-        sliders.insertAdjacentHTML(
-            "beforeend",
-            `<img class="slider-img" src="${blog.acf.images}">`
-        );
-    });
-
-    scrollPerClick = "900";
-
-    console.log(result);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* API call and create HTML */
-
-// const sliderContainer = document.querySelector(".blogs_container")
-
-
-// async function getData() {
-
-//     const response = await fetch("https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed");
-//     const json = await response.json();
-//     console.log(json)
-
-//     for (let i = 0; i < 6; i++) {
-//         sliderContainer.innerHTML += `
-//         <a href "#" class="blogs">
-//         <div class="img_container">
-//         <p class = "recipe_name">${json[i].acf.h1}</p>
-//           <img src="${json[i].acf.mainimg}" alt="">
-//         </div>
-//       </a>
-
-// `
-
-//         /* Carousel functionality */
-
-//         const slides = document.querySelectorAll(".blogs")
-//         const nextBtn = document.querySelector(".next")
-//         const prevBtn = document.querySelector(".prev")
-
-//         // prevBtn.style.display = "none"
-
-//         let counter = 0;
-//         nextBtn.addEventListener("click", () => {
-//             console.log(nextBtn)
-//             counter++;
-//             carouselFunctionality()
-//         })
-//         prevBtn.addEventListener("click", () => {
-//             counter--;
-//             carouselFunctionality()
-//         })
-
-//         function carouselFunctionality() {
-//             if (counter > 3) {
-//                 counter = 0;
-//             }
-
-//             if (counter === -1) {
-//                 counter = 3;
-//             }
-//             slides.forEach((slide) => {
-//                 slide.style.transform = `translateX(-${counter * 100}%)`
-//             })
-
-//             console.log(counter)
-//         }
-
-//     }
-
-// }
-// getData()

@@ -14,10 +14,11 @@
     a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-  <title>Challenges | Category</title>
+  <title>Category | Blog</title>
 </head>
   <body id="body">
 
+        <!-- Header -->
      <header>
 
         <!-- Hamburger Menu -->
@@ -32,13 +33,12 @@
           </div>
         </div>
 
-
         <!-- Navigation -->
         <div class="nav-container">
           <p class="logo">FILIPINOS IN THE OLD AND MODERN ERA</p>
           <nav>
             <ul>
-              <li><a class="active" href="index.html">HOME</a></li>
+              <li><a href="index.html">HOME</a></li>
               <li><a href="about.html">ABOUT</a></li>
               <li><a href="blog.html">BLOG</a></li>
               <li><a href="contact.html">CONTACT</a></li>
@@ -48,17 +48,29 @@
         <hr>
     </header>
 
-          <!-- Main -->
-        <main>
-          <div class="container">
-            <h1>Challenges</h1>
+      <!-- Main -->
+      <main>
+        <h1>Challenges</h1> 
+       <label class="dropdown">
+          <div class="dd-button">
+            Category
           </div>
-        </main>
-
-        <div class="btn-container">
-            <a id="view-btn" href="blog.html">View More</a>
-          </div>
-
+          <input type="checkbox" class="dd-input" id="dropdown">
+          <ul class="dd-menu">
+            <a class="filter-link" href="category-blog.html"><li class="filter-btn">Blog</li></a>
+            <a class="filter-link" href="category-challenges.html"><li class="filter-btn">Challenges</li></a>
+            <a class="filter-link" href="category-celebrations.html"><li class="filter-btn">Celebrations</li></a>
+            <a class="filter-link" href="category-food.html"><li class="filter-btn">Food</li></a>
+                <li class="divider"></li>
+          </ul>
+        </label>
+        <hr>
+        <div class="blog-container row" id="blog">
+          <!-- <div class="loader"></div> -->
+        </div>
+          <button id="view-btn">View More</button>
+      </main>
+      
               <a href="#body" id="top-btn" title="Go to Top">Top</a>
 
               <!-- Footer -->
@@ -72,6 +84,6 @@
                   </div>
                 </div>
               </footer>
-              <script src="/js/challenges.js"></script>
+              <script src="/js/category.js"></script>
         </body>
       </html>

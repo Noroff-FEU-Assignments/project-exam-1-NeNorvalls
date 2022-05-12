@@ -14,29 +14,31 @@
     a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-  <title>Blog | Category</title>
+  <title>Category | Blog</title>
 </head>
   <body id="body">
 
+        <!-- Header -->
      <header>
-         <!-- Hamburger Menu -->
-         <input type="checkbox" class="checkbox" hidden id="click">
-         <div class="animation">
-           <div class="hamburger-icon">
-             <label for="click">
-               <span class="line line-1"></span>
-               <span class="line line-2"></span>
-               <span class="line line-3"></span>
-             </label>
-           </div>
-         </div>
- 
-         <!-- Navigation -->
+
+        <!-- Hamburger Menu -->
+        <input type="checkbox" class="checkbox" hidden id="click">
+        <div class="animation">
+          <div class="hamburger-icon">
+            <label for="click">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Navigation -->
         <div class="nav-container">
           <p class="logo">FILIPINOS IN THE OLD AND MODERN ERA</p>
           <nav>
             <ul>
-              <li><a class="active" href="index.html">HOME</a></li>
+              <li><a href="index.html">HOME</a></li>
               <li><a href="about.html">ABOUT</a></li>
               <li><a href="blog.html">BLOG</a></li>
               <li><a href="contact.html">CONTACT</a></li>
@@ -46,17 +48,29 @@
         <hr>
     </header>
 
-        <!-- Main -->
-        <main>
-          <div class="container">
-            <h1>Blog</h1>
+      <!-- Main -->
+      <main>
+        <h1>Blogs</h1>
+       <label class="dropdown">
+          <div class="dd-button">
+            Category
           </div>
-        </main>
-
-        <div class="btn-container">
-            <a id="view-btn" href="blog.html">View More</a>
-          </div>
-
+          <input type="checkbox" class="dd-input" id="dropdown">
+          <ul class="dd-menu">
+                <a class="filter-link" href="category-blog.html"><li class="filter-btn">Blog</li></a>
+                <a class="filter-link" href="category-challenges.html"><li class="filter-btn">Challenges</li></a>
+                <a class="filter-link" href="category-celebrations.html"><li class="filter-btn">Celebrations</li></a>
+                <a class="filter-link" href="category-food.html"><li class="filter-btn">Food</li></a>
+                <li class="divider"></li>
+          </ul>
+        </label>
+        <hr>
+        <div class="blog-container row" id="blog">
+          <!-- <div class="loader"></div> -->
+        </div>
+          <button id="view-btn">View More</button>
+      </main>
+      
               <a href="#body" id="top-btn" title="Go to Top">Top</a>
 
               <!-- Footer -->
@@ -70,6 +84,6 @@
                   </div>
                 </div>
               </footer>
-              <script src="/js/blog.js"></script>
+              <script src="/js/category.js"></script>
         </body>
       </html>
