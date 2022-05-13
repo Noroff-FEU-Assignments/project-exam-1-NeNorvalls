@@ -1,6 +1,6 @@
 // const categoryUrl = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?/categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";
 const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed";
-const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&_embed&page=2" 
+const page2 = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&_embed&per_page=100" 
 const blogContainer = document.querySelector(".blog-container");
 const viewMoreBtn = document.querySelector("#view-btn");
 const categoryDropdown = document.querySelector(".dropdown-container");
@@ -11,7 +11,6 @@ async function fetchBlogs(url) {
         const blogs = await response.json();
         console.log(blogs);
         createBlogs(blogs);
-        createDropdown();
     } catch (error) {
         console.log(error);
         blogContainer.classList.remove("loader");
@@ -45,29 +44,6 @@ function createBlogs(blogpost) {
     })
 }
 viewMoreBtn.onclick = function() {
-    fetchBlogs(page);
+    fetchBlogs(page2);
     viewMoreBtn.style.display = "none";
-}
-
-
-
-
-
-function createDropdown() {
-
-    categoryDropdown.innerHTML += `
-                <label class="dropdown">
-                <div class="dd-button">
-                    Category
-                </div>
-                <input type="checkbox" class="dd-input" id="dropdown">
-                <ul class="dd-menu">
-                <a class="filter-link" href="cat-blog.html"><li class="filter-btn">Blog</li></a>
-                <a class="filter-link" href="cat-challenges.html"><li class="filter-btn">Challenges</li></a>
-                <a class="filter-link" href="cat-celebrations.html"><li class="filter-btn">Celebrations</li></a>
-                <a class="filter-link" href="cat-food.html"><li class="filter-btn">Food</li></a>
-                    <li class="divider"></li>
-                </ul>
-                </label>`
-
 }
