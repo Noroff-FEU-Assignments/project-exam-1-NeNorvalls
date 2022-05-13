@@ -1,5 +1,4 @@
-// const categoryUrl = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?/categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed";
+const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=18&categories_exclude=19,25,17&acf_format=standard&orderby=date&_embed";
 const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&_embed&page=2" 
 const blogContainer = document.querySelector(".blog-container");
 const viewMoreBtn = document.querySelector("#view-btn");
@@ -36,6 +35,7 @@ function createBlogs(blogpost) {
                 <h2 class="blog-title">${blog.title.rendered}</h2>
                 <p class="blog-category">Category: ${blog._embedded["wp:term"][0][0].name}</p>
                 <a href="details.html?id=${blog.id}" id="readmore-btn">Read more</a>
+                <p>
             </div>
 
         </div>
