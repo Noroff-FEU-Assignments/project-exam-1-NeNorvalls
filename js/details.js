@@ -33,7 +33,7 @@ getBlog();
 
         blogContainer.innerHTML = ` <h1>${blog.title.rendered}</h1>
                                 <div class="content-img-container">
-                                    <img src="${blog.acf.images}" alt="${blog.title.rendered}">
+                                    <img class="details-img" src="${blog.acf.images}"  onclick="openModal()" alt="${blog.title.rendered}">
                                 </div>
                                 <p><span class="content-info">Author: ${blog._embedded.author[0].name}</span></p>
                                 <p><span class="content-info"> Category: ${blog._embedded["wp:term"][0][0].name}</span></p>
