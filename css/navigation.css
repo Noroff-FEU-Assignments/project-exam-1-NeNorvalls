@@ -32,6 +32,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: #fefe00;
+    text-decoration: underline;
+}
+
 .header-bg {
     display: flex;
     align-items: center;

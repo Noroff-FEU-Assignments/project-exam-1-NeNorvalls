@@ -1,24 +1,22 @@
 const modal = document.querySelector(".modal");
-const imgContainer = document.querySelector(".modal-img");
-const modalBackdrop = document.querySelector(".modal-backdrop");
+const imageContainer = document.querySelector(".modal-img");
+const backdrop = document.querySelector(".backdrop");
 
-function getDetailsImgSrc() {
-    const detailsImg = document.querySelector(".content-img-container img");
-    return detailsImg;
-}
+    function getDetailsImgSource() {
+        const detailsImage = document.querySelector(".details-img");
+        return detailsImage;
+    }
 
-imgContainer.addEventListener("click", openModal);
+    function openModal() {
+        const imageSource = getDetailsImgSource();
+        imageContainer.src = imageSource.src;
+        backdrop.style.display = "block";
+        modal.style.display = "block";
+    }
 
-function openModal() {
-    const imgSrc = getDetailsImgSrc();
-    imgContainer.src = imgSrc.src;
-    modalBackdrop.style.display = "block";
-    modal.style.display = "block";
-}
+    backdrop.addEventListener("click", closeModal)
 
-modalBackdrop.addEventListener("click", closeModal);
-
-function closeModal() {
-    modal.style.display = "none";
-    modalBackdrop.style.display = "none";
-}
+    function closeModal() {
+        modal.style.display = "none";
+        backdrop.style.display = "none";
+    }
