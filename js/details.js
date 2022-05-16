@@ -7,31 +7,28 @@ const id = params.get("id");
 // const contentURL = `https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&_embed/${id}`;
 const contentURL = `https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/${id}?acf_format=standard&_embed&`;
 async function getBlog() {
-    try {
-        const response = await fetch(contentURL)
-        const content = await response.json();
-        console.log(content);
-        newPageTitle(content);
-        createHTML(content);
-    }
-    catch(error) {
-        console.log(error);
-        blogContainer.innerHTML = message("Failed to display blogs", "error");
-    }
+  try {
+    const response = await fetch(contentURL);
+    const content = await response.json();
+    console.log(content);
+    newPageTitle(content);
+    createHTML(content);
+  } catch (error) {
+    console.log(error);
+    blogContainer.innerHTML = message("Failed to display blogs", "error");
+  }
 }
 
 getBlog();
 
-    function newPageTitle(blog) {
-        document.title = `${blog.title.rendered}`;
-    }
- 
+function newPageTitle(blog) {
+  document.title = `${blog.title.rendered}`;
+}
 
-    function createHTML(blog) {
-        
-        blogContainer.classList.remove("loader");
+function createHTML(blog) {
+  blogContainer.classList.remove("loader");
 
-        blogContainer.innerHTML = ` <h1>${blog.title.rendered}</h1>
+  blogContainer.innerHTML = ` <h1>${blog.title.rendered}</h1>
                                 <div class="content-img-container">
                                     <img class="details-img" src="${blog.acf.images}"  onclick="openModal()" alt="${blog.title.rendered}">
                                 </div>
@@ -40,8 +37,7 @@ getBlog();
                                 <div class="content-text-container">
                                     <p class="content-text">${blog.content.rendered}</p>
                                 </div>
-                                <p><span class="content-info">Date: ${blog.date}</span></p>`
+                                <p><span class="content-info">Date: ${blog.date}</span></p>`;
 
-                                console.log(blog)
-                                             
+  console.log(blog);
 }

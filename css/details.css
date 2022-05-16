@@ -5,8 +5,9 @@
     object-fit: cover;
     margin: auto;
     cursor: pointer;
-}
-
-.details-img:hover {
+  }
+  
+  .details-img:hover {
     opacity: 0.9;
-}
+  }
+  

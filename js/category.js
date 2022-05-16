@@ -1,1 +1,0 @@
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?/categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";

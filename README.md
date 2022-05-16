@@ -71,12 +71,17 @@ Note that this is an exam, and therefore tutor support will be limited as per th
 3. Allow users to submit comments on a blog post, and post this data to WordPress
 
 My own list:
-modal
-responsiveness
-header
-hamburger
-css of each pages
-contact design
-xd redesign
-send for testing
-report
+
+- Buttons should have a hover state (slight background colour change is good)
+- Should show loader while fetching on detail/blog pages
+- You can make your form validation more simple by using HTML attributes
+- You can filter without going to another page by re-rendering your HTML
+- Read more button could be styled better
+  responsiveness
+  header
+  hamburger
+  css of each pages
+  contact design
+  xd redesign
+  send for testing
+  report
