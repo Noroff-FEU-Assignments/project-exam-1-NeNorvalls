@@ -79,7 +79,6 @@ My own list:
 - Read more button could be styled better
   responsiveness
   header
-  hamburger
   css of each pages
   contact design
   xd redesign

@@ -1,7 +1,8 @@
 const buttonContainer = document.querySelector(".map");
 const innerContainer = document.querySelector(".inner");
-const url =
-  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=9";
+const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=9";
+
+
 
 buttonContainer.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
@@ -49,3 +50,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Make the carousel responsive by fetching a url that displays 3 results per page
+const responsiveUrl = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=3";
+
+if (window.innerWidth < 1290) {
+
+  document.addEventListener("DOMContentLoaded", () => {
+    async function fetchMediaQBlogs(responsiveUrl) {
+      try {
+        const mqResponse = await fetch(responsiveUrl);
+        const mqBlogs = await mqResponse.json();
+        console.log(mqBlogs);
+        createMediaQBlogs(mqBlogs);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  
+    fetchMediaQBlogs(responsiveUrl);
+  
+    function createMediaQBlogs(mqBlogpost) {
+      mqBlogpost.forEach(function (mqBlog) {
+        innerContainer.innerHTML += `<a id="carousel-link" href="details.html?id=${mqBlog.id}"
+                                      <div class="card">
+                                          <img src="${mqBlog.acf.images}">
+                                          <div class="content">
+                                              <h1 class="carousel-h1">${mqBlog.title.rendered}</h1>
+                                          </div>
+                                      </div>
+                                    </a>`;
+      });
+    }
+  });
+}

@@ -25,6 +25,12 @@ body {
   width: 77.5em;
 }
 
+@media screen and (max-width: 1290px) {
+  .wrapper {
+    width: 25.5em;
+  }
+  
+}
 .wrapper .inner {
   display: flex;
   grid-gap: 1em;

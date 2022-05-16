@@ -9,7 +9,8 @@
   }
   
   .backdrop:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(40, 40, 40, 0.8);
+    transition: all 0.3s;
   }
   
   .modal {
@@ -17,7 +18,6 @@
     position: fixed;
     z-index: 1;
     width: 80%;
-    /* height: 1200px; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

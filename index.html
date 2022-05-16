@@ -22,31 +22,47 @@
 
         <!-- Header -->
         <header>
-      
-          <!-- Hamburger Menu -->
-          <input type="checkbox" class="checkbox" hidden id="click">
-          <div class="animation">
-            <div class="hamburger-icon">
-              <label for="click">
-                <span class="line line-1"></span>
-                <span class="line line-2"></span>
-                <span class="line line-3"></span>
-              </label>
-            </div>
-          </div>
+
+
       
           <!-- Navigation -->
-          <div class="nav-container">
+          <!-- <div class="nav-container">
             <p class="logo">FILIPINOS IN THE OLD AND MODERN ERA</p>
-            <nav>
-              <ul>
+            <nav class="top-nav" id="top-nav">
+              <input type="checkbox" class="menu-btn" id="menu-btn">
+              <label for="" class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+              <ul class="menu">
                 <li><a class="active" href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
               </ul>
             </nav>
-          </div>
+          </div> -->
+
+          <nav class="navbar">
+            <a href="#" class="logo">FILIPINOS IN THE OLD AND MODERN ERA</a>
+      
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="About.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
       
           <hr>
       
@@ -92,6 +108,7 @@
         </footer>
       
         <script src="/js/components.js/carousel.js"></script>
+        <script src="/js/components.js/hamburger.js"></script>
       
       </body>
 </html>
