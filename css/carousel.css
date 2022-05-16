@@ -29,7 +29,10 @@ body {
   .wrapper {
     width: 25.5em;
   }
-  
+  .map button {
+    margin: 0 1em;
+  }
+
 }
 .wrapper .inner {
   display: flex;

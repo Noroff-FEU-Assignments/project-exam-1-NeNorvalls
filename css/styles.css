@@ -25,6 +25,11 @@ main {
   max-width: 1200px;
 }
 
+.latest-heading {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 /* HERO homepage */
 .bg-text {
   color: black;

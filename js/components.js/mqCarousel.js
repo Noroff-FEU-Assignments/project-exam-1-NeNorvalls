@@ -1,7 +1,8 @@
+// Make the carousel responsive by fetching a url that displays 3 results per page
+const responsiveUrl = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=3";
+
 const buttonContainer = document.querySelector(".map");
 const innerContainer = document.querySelector(".inner");
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=9";
-
 
 
 buttonContainer.addEventListener("click", (e) => {
@@ -23,9 +24,9 @@ buttonContainer.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  async function fetchBlogs(url) {
+  async function fetchBlogs(responsiveUrl) {
     try {
-      const response = await fetch(url);
+      const response = await fetch(responsiveUrl);
       const blogs = await response.json();
       console.log(blogs);
       createBlogs(blogs);
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  fetchBlogs(url);
+  fetchBlogs(responsiveUrl);
 
   function createBlogs(blogpost) {
     blogpost.forEach(function (blog) {
@@ -49,5 +50,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-
