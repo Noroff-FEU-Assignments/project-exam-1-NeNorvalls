@@ -1,9 +1,15 @@
+/* Import Styles */
 @import url(/css/about.css);
 @import url(/css/navigation.css);
 @import url(/css/blog.css);
 @import url(/css/category.css);
 @import url(/css/modal.css);
 @import url(/css/details.css);
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 /* Universal styles */
 *, html {
@@ -14,9 +20,42 @@
   font-family: Nunito, sans-serif;
 }
 
-body {
+/* Loader */
+.loader-wrapper {
+  /* height: 100vh; */
+  text-align: center;
+  margin: 0 auto;
+}
+.loader {
+  margin: 20vh 20vh;
+  width: 48px;
+  height: 48px;
+  border: 5px dotted rgb(46, 44, 44);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+  
+
+
+.min-height {
   min-height: 100vh;
+}
+
+body {
   background-color: #ffe1e0;
+  min-height: 100vh;
 }
 
 /* general layout style */
@@ -30,6 +69,11 @@ main {
   margin-top: 3rem;
 }
 
+.btn-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
 /* HERO homepage */
 .bg-text {
   color: black;
@@ -40,6 +84,7 @@ main {
 }
 
 #top-btn {
+  font-weight: bold;
   color: #fefe00;
   padding: 8px 8px;
   background-color: #290a5c;
@@ -51,9 +96,10 @@ main {
 }
 
 #top-btn:hover {
-  color: black;
-  background-color: #fff;
+  color: #290a5c;
+  background-color: #ffe1e0;
 }
+
 
 /* Footer */
 footer {

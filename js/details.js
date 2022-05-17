@@ -1,4 +1,5 @@
 const blogContainer = document.querySelector(".blog-content-container");
+const loader = document.querySelector(".loader");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -26,18 +27,22 @@ function newPageTitle(blog) {
 }
 
 function createHTML(blog) {
-  blogContainer.classList.remove("loader");
+  loader.classList.remove("loader");
 
   blogContainer.innerHTML = ` <h1>${blog.title.rendered}</h1>
                                 <div class="content-img-container">
                                     <img class="details-img" src="${blog.acf.images}"  onclick="openModal()" alt="${blog.title.rendered}">
                                 </div>
-                                <p><span class="content-info">Author: ${blog._embedded.author[0].name}</span></p>
-                                <p><span class="content-info"> Category: ${blog._embedded["wp:term"][0][0].name}</span></p>
-                                <div class="content-text-container">
-                                    <p class="content-text">${blog.content.rendered}</p>
+                                <div class="content-info-container">
+                                  <p><span class="content-info">Author: ${blog._embedded.author[0].name}</span></p>
+                                  <p><span class="content-info"> Category: ${blog._embedded["wp:term"][0][0].name}</span></p>
+                                  <p><span class="content-info">Date: ${blog.date}</span></p>
                                 </div>
-                                <p><span class="content-info">Date: ${blog.date}</span></p>`;
+                                <div class="content-text-container">
+                                ${blog.content.rendered}
+                                </div>`;
 
   console.log(blog);
 }
+
+{/* <p class="content-text">${blog.content.rendered}</p> */}

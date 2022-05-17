@@ -3,6 +3,7 @@ const url =
 const page =
   "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&_embed&page=2";
 const blogContainer = document.querySelector(".blog-container");
+const loader = document.querySelector(".loader");
 const viewMoreBtn = document.querySelector("#view-btn");
 const categoryDropdown = document.querySelector(".dropdown-container");
 
@@ -15,7 +16,7 @@ async function fetchBlogs(url) {
     createDropdown();
   } catch (error) {
     console.log(error);
-    blogContainer.classList.remove("loader");
+    loader.classList.remove("loader");
     blogContainer.innerHTML = errorMessage("Failed to display blogs", "error");
     viewMoreBtn.style.display = "none";
   }
@@ -24,7 +25,7 @@ async function fetchBlogs(url) {
 fetchBlogs(url);
 
 function createBlogs(blogpost) {
-  blogContainer.classList.remove("loader");
+  loader.classList.remove("loader");
 
   blogpost.forEach(function (blog) {
     blogContainer.innerHTML += `

@@ -1,5 +1,6 @@
 const buttonContainer = document.querySelector(".map");
 const innerContainer = document.querySelector(".inner");
+const loader = document.querySelector(".loader");
 const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=9";
 
 
@@ -37,8 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchBlogs(url);
 
   function createBlogs(blogpost) {
+    
     blogpost.forEach(function (blog) {
-      innerContainer.innerHTML += `<a id="carousel-link" href="details.html?id=${blog.id}"
+            innerContainer.innerHTML += `<a id="carousel-link" href="details.html?id=${blog.id}"
                                     <div class="card">
                                         <img src="${blog.acf.images}">
                                         <div class="content">

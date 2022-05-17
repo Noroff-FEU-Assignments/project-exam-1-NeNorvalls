@@ -1,6 +1,10 @@
-@import "/css/styles.css";
+
 
 /* Layout */
+.blog-content-container {
+  min-height: 80vh;
+}
+
 .row {
   width: 100%;
   margin: 0 auto;
@@ -39,15 +43,16 @@
   white-space: nowrap;
   overflow: hidden;
 }
-
+/* #fefe00 #290a5c*/
 /* buttons */
 #view-btn,
 #view-btn-2 {
-  background: #290a5c;
+  background: #ffe1e0;
   border-radius: 999px;
+  border: 2px solid #290a5c;
   box-shadow: #290a5c 0 10px 20px -10px;
   box-sizing: border-box;
-  color: #fefe00;
+  color: rgb(238, 102, 87);
   cursor: pointer;
   font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
     NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
@@ -64,7 +69,14 @@
   touch-action: manipulation;
   width: fit-content;
   word-break: break-word;
-  border: 0;
+}
+
+#view-btn:hover,
+#view-btn-2:hover {
+  color: #290a5c;
+  background-color: #ffe1e0;
+  border: 2px solid #290a5c;
+  transition: all .2s ease-in;
 }
 
 .view-btn-container {
@@ -89,6 +101,14 @@
   align-items: center;
 }
 
+#readmore-btn {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #290a5c;
+}
+#readmore-btn:hover {
+  color: rgb(238, 102, 87);
+}
 
 /* RESPONSIVENESS */
 

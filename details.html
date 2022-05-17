@@ -21,6 +21,7 @@
     <body id="body">
 
       <!-- Header -->
+      <div class="min-height">
       <header>
 
         <!-- Hamburger Menu -->
@@ -51,16 +52,18 @@
 
       <!-- Main -->
       <main>
-        <div class="blog-content-container loader">
-        </div>
-        <div class="backdrop"></div>
-        <div class="modal">
-          <img class="modal-img" alt="details images">
-        </div>
+          <div class="loader-container">
+            <div class="loader"></div>
+            <div class="blog-content-container"></div>
+            <div class="backdrop"></div>
+            <div class="modal">
+              <img class="modal-img" alt="details images">
+            </div>
+          </div>
       </main>
 
       <a href="#body" id="top-btn" title="Go to Top">Top</a>
-
+    </div>
       <!-- Footer -->
       <footer>
         <div class="footer_container">
@@ -72,8 +75,8 @@
           </div>
         </div>
       </footer>
-
       <script src="js/details.js"></script>
+      <script src="js/components.js/loader.js"></script>
       <script src="js/components.js/modal.js"></script>
 
     </body>
