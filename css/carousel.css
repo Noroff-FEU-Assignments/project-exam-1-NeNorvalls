@@ -84,22 +84,22 @@ body {
   text-align: center;
   height: 21em;
 }
-.content h1,
-h3 {
+.content h3,
+h4 {
   margin: 0.35em 0;
-}
-
-.content h1 {
-  margin-top: 13em;
-  color: #fff;
-  font-size: 1.25rem;
-  line-height: 1;
 }
 
 .content h3 {
   color: #ccc;
   font-size: 0.9rem;
   font-weight: 300;
+}
+
+.content h4 {
+  margin-top: 13em;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 .map {
@@ -145,22 +145,62 @@ button.eighth, button.ninth {
 }
 
 /* Media Query */
-@media screen and (max-width: 1290px) {
+/* make the carousel smaller */
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    width: 50em;
+  }
+  .card img {
+    width: 15.8em;
+    height: 11em;
+  }
+  .card .content {
+    height: 15em;
+  }
+  .content h4 {
+    margin-top: 11em;
+    font-size: 1rem;
+  }
+}
+
+/* Styles for the latest post on smaller screens */
+@media screen and (max-width: 960px) {
   .mq-center {
     display: flex;
   }
   .mq-wrapper {
     display: block;
+    width: 25em;
   }
-
   .center {
     display: none;
   }
-    .wrapper {
-      width: 25.5em;
-    }
-    .map button {
-      margin: 0 1em;
-    }
-  
+  .card img {
+    width: 25em;
+    height: 14em;
   }
+  .card .content {
+    margin: 1em 0;
+    height: 17em;
+  }
+  .content h4 {
+    margin-top: 14rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .card img {
+    width: 16em;
+    height: 11em;
+  }
+  .card .content {
+    margin: 1em 0;
+    height: 14.5em;
+  }
+  .mq-wrapper {
+    width: 16em;
+  }
+  .content h4 {
+    margin-top: 10.7em;
+  }
+}

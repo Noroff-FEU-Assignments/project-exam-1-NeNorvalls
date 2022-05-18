@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <div class="card">
                                         <img src="${blog.acf.images}">
                                         <div class="content">
-                                            <h1 class="carousel-h1">${blog.title.rendered}</h1>
+                                            <h4 class="carousel-h4">${blog.title.rendered}</h4>
                                         </div>
                                     </div>
                                   </a>`;
