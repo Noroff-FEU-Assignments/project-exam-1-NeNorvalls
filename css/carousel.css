@@ -18,6 +18,30 @@ body {
   margin-top: 3em;
 }
 
+/* the second carousel will not show on desktop */
+.mq-center {
+  display: none;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  margin-top: 3em;
+}
+.mq-wrapper {
+  display: none;
+  overflow: auto;
+}
+.mq-wrapper .mq-inner {
+  display: block;
+  grid-gap: 1em;
+  transition: all 1s ease-in-out;
+}
+
+
+
+
+
 .wrapper {
   display: flex;
   grid-gap: 1em;
@@ -25,15 +49,7 @@ body {
   width: 77.5em;
 }
 
-@media screen and (max-width: 1290px) {
-  .wrapper {
-    width: 25.5em;
-  }
-  .map button {
-    margin: 0 1em;
-  }
 
-}
 .wrapper .inner {
   display: flex;
   grid-gap: 1em;
@@ -130,9 +146,21 @@ button.eighth, button.ninth {
 
 /* Media Query */
 @media screen and (max-width: 1290px) {
-  .map button.fourth, button.fifth,
-  button.sixth, button.seventh,
-  button.eighth, button.ninth  {
-    display: inline-block;
+  .mq-center {
+    display: flex;
   }
-}
+  .mq-wrapper {
+    display: block;
+  }
+
+  .center {
+    display: none;
+  }
+    .wrapper {
+      width: 25.5em;
+    }
+    .map button {
+      margin: 0 1em;
+    }
+  
+  }
