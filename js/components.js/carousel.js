@@ -23,6 +23,8 @@ buttonContainer.addEventListener("click", (e) => {
   }
 });
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   async function fetchBlogs(url) {
     try {

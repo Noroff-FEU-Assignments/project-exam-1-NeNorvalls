@@ -38,7 +38,6 @@ function createBlogs(blogpost) {
                 <a href="details.html?id=${blog.id}" id="readmore-btn">Read more</a>
                 <p>
             </div>
-
         </div>
         
         `;

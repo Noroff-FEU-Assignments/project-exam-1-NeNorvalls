@@ -117,9 +117,22 @@ h3 {
   background: #fefe00;
 }
 
+.map button.fourth, button.fifth,
+button.sixth, button.seventh,
+button.eighth, button.ninth {
+  display: none;
+  }
+
 #carousel-link:hover {
   opacity: 0.8;
   transition: all 0.3s;
 }
 
 /* Media Query */
+@media screen and (max-width: 1290px) {
+  .map button.fourth, button.fifth,
+  button.sixth, button.seventh,
+  button.eighth, button.ninth  {
+    display: inline-block;
+  }
+}
