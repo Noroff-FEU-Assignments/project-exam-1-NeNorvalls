@@ -1,6 +1,4 @@
-
-
-/* Layout */
+/* ################### LAYOUT #################### */
 .blog-content-container {
   min-height: 80vh;
 }
@@ -14,7 +12,7 @@
   float: left;
 }
 
-/* images */
+/* ################### IMAGES #################### */
 .bg-img {
   width: 90%;
   margin: 0 auto;
@@ -26,7 +24,7 @@
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-/* title */
+/* ################### TITLE #################### */
 .title-container {
   display: flex;
   flex-direction: column;
@@ -43,6 +41,8 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* ################### BUTTONS #################### */
 /* #fefe00 #290a5c*/
 /* buttons */
 #view-btn,

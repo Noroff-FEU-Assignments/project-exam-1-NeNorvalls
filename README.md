@@ -75,7 +75,6 @@ My own list:
 - Should show loader while fetching on detail/blog pages
 - You can make your form validation more simple by using HTML attributes
 - You can filter without going to another page by re-rendering your HTML
-  carousel for mediaquery
 - Read more button could be styled better
   responsiveness
   header
@@ -84,3 +83,33 @@ My own list:
   xd redesign
   send for testing
   report
+
+<!-- ################### SERIOUS FIXING  ####################  -->
+
+About Page
+
+1. image is not responsive
+2. Text responsiveness on 800px - down 270px
+3. Header Container
+4. LOGO font-size
+
+Contact Page
+
+1. Not working at all
+2. Submit Button is not centered in smaller devices
+
+Blog Page
+
+1. Blogs and category text is sticking on the left side started at 1200px
+2. Images not centered started at 390px
+3. Title is not responsive at 390px
+4. blogs page is not working the way it should same on the index page
+
+Details Page
+
+1. Text need margin for responsiveness
+2. Title font-size need adjustment for responsiveness
+
+Home Page
+
+1.

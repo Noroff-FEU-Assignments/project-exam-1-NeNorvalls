@@ -1,7 +1,7 @@
 function validateForm() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const address = document.getElementById("address").value;
+  const subject = document.getElementById("subject").value;
   const message = document.getElementById("message").value;
   const errorMessage = document.getElementById("errorMessage");
   const form = document.getElementById("contactForm").reset();
@@ -10,7 +10,7 @@ function validateForm() {
   errorMessage.style.display = "block";
 
   var error;
-  if (name.length < 1) {
+  if (name.length < 5) {
     error = "Please enter your full name";
     errorMessage.innerHTML = error;
     return false;
@@ -20,13 +20,13 @@ function validateForm() {
     errorMessage.innerHTML = error;
     return false;
   }
-  if (address.length < 5) {
-    error = "Please enter a valid address";
+  if (subject.length < 15) {
+    error = "Please enter morethan 15 characters";
     errorMessage.innerHTML = error;
     return false;
   }
-  if (message.length <= 20) {
-    error = "Please enter more than 20 characters";
+  if (message.length <= 25) {
+    error = "Please enter more than 25 characters";
     errorMessage.innerHTML = error;
     return false;
   }

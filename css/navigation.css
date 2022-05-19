@@ -4,6 +4,13 @@
     font-size: 2.5em;
     text-transform: capitalize;
   }
+  #mq-logo {
+    display: none;
+    font-family: Algerian;
+    color: #fff;
+    font-size: 2.5em;
+    text-transform: capitalize;
+  }
 
   .header-bg {
     display: flex;
@@ -64,7 +71,7 @@
     display: none;
     cursor: pointer;
   }
-  
+
   .bar {
     display: block;
     width: 25px;
@@ -73,8 +80,48 @@
     transition: all 0.3s ease-in-out;
     background-color: #fff;
   }
-  
-  @media(max-width:768px) {
+
+
+
+
+  /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 1200px #################### */
+  @media screen and (max-width: 1200px) {
+    /* LOGO RESPONSIVENESS */
+    .logo {
+    font-size: 1.8em;
+    }
+    /* HEADER BACKGROUND IMAGE RESPONSIVENESS */
+    .header-bg {
+      height: 600px;
+    }
+    p.bg-text {
+      margin-top: -7em;
+      font-size: 26px;
+    }
+    /* LATEST POST HEADING */
+    h1.latest-heading {
+      font-size: 1.4rem;
+    }
+  }
+
+    /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 960px #################### */
+    @media screen and (max-width: 960px) {
+      /* LOGO RESPONSIVENESS */
+      #mq-logo {
+      display: block;
+      }
+      .logo {
+        display: none;
+      }
+      /* HEADER BACKGROUND IMAGE RESPONSIVENESS */
+      .header-bg {
+        height: 430px;
+      }
+    }
+
+  /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 768px #################### */
+  @media screen and (max-width:768px) {
+    /* HAMBURGER RESPONSIVENESS */
     .hamburger {
       display: block;
     }
@@ -110,8 +157,48 @@
     .nav-menu.active {
       left: 0;
     }
+    /* make the navbar fixed as an alternative to the top-btn */
+    .navbar {
+      width: 100%;
+      background: #290a5c;
+      position: fixed;
+    }
+    #top-btn {
+      display: none;
+    }
+  
+    /* HEADER BACKGROUND TEXT RESPONSIVENESS */
+    p.bg-text {
+      font-size: 1rem;
+      margin-top: -8rem;
+    }
+    p.bg-text span {
+      display: none;
+    }
+    /* FOOTER CONTENT */
+    span a i {
+      font-size: 18px;
+    }
+    span.copy {
+      font-size: 14px;
+    }
   }
   
+/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 460px #################### */
+@media screen and (max-width: 460px) {
+  /* LOGO RESPONSIVENESS */
+  #mq-logo {
+    font-size: 1.4em;
+  }
+  /* HEADER BACKGROUND IMAGE RESPONSIVENESS */
+  .header-bg {
+    height: 300px;
+  }
+}
 
-
-
+/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 279px #################### */
+@media screen and (max-width: 279px) {
+  p.bg-text {
+    display: none;
+  }
+}
