@@ -16,6 +16,7 @@
     a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+    
   <title>Category | Blog</title>
 </head>
     <body id="body">
@@ -26,7 +27,9 @@
          <!-- ################### HAMBURGER MENU #################### -->
         
           <nav class="navbar">
-          <a href="#" class="logo">Filipinos in the Old and Modern Era</a>
+          <a href="index.html" class="logo">Filipinos in the Old and Modern Era</a>
+          <!-- display only on small screens -->
+          <a href="index.html" id="mq-logo">Modern Filipinos</a>
     
           <ul class="nav-menu">
             <li class="nav-item">
@@ -48,12 +51,12 @@
             <span class="bar"></span>
           </div>
         </nav>
-        <hr>
       </header>
 
        <!-- ################### MAIN #################### -->
       <main>
-        <h1>Challenges</h1>
+        <h1 class="category-title">Challenges</h1>
+        <hr>
         <label class="dropdown">
           <div class="dd-button">
             Category
@@ -75,9 +78,9 @@
             <li class="divider"></li>
           </ul>
         </label>
-        <hr>
-        <div class="loader-container">
+        <div class="loader-wrapper">
           <div class="loader"></div>
+        </div>
           <div class="blog-container row" id="blog"></div>
         <button id="view-btn">View More</button>
       </main>
@@ -95,7 +98,7 @@
           </div>
         </div>
       </footer>
-
+      <script src="js/components.js/hamburger.js"></script>
       <script src="/js/cat-challenges.js"></script>
 
     </body>

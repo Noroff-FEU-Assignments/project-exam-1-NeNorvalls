@@ -34,12 +34,14 @@ function createHTML(blog) {
                                     <img class="details-img" src="${blog.acf.images}"  onclick="openModal()" alt="${blog.title.rendered}">
                                 </div>
                                 <div class="content-info-container">
-                                  <p><span class="content-info">Author: ${blog._embedded.author[0].name}</span></p>
                                   <p><span class="content-info"> Category: ${blog._embedded["wp:term"][0][0].name}</span></p>
-                                  <p><span class="content-info">Date: ${blog.date}</span></p>
                                 </div>
                                 <div class="content-text-container">
                                 ${blog.content.rendered}
+                                </div>
+                                <div class="content-info-container info-below">
+                                  <p><span class="content-info"><span id="author">Author: </span><span id="author-name">${blog._embedded.author[0].name}</span></span></p>
+                                  <p><span class="content-info">Date: ${blog.date}</span></p>
                                 </div>`;
 
   console.log(blog);

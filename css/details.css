@@ -6,7 +6,9 @@
 .blog-content-container h1 {
   margin: 2rem 0 2rem 0;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 1px;
+  color: #290a5c;
   font-size: 2.5em;
 }
 
@@ -36,6 +38,20 @@
 }
 
 .content-text-container p {
-  font-family: 'Lora', serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
+.info-below {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+span#author {
+  font-style: italic;
+  font-family: 'PT Sans', sans-serif;
+  opacity: 70%;
+}
+span#author-name {
+  font-weight: bold;
+}

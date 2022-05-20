@@ -83,6 +83,8 @@ body {
 }
 .content h3,
 h4 {
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 1px;
   margin: 0.35em 0;
 }
 

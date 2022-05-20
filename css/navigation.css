@@ -1,5 +1,5 @@
   .logo {
-    font-family: Algerian;
+    font-family: 'Fredericka the Great', cursive;
     color: #fff;
     font-size: 2.5em;
     text-transform: capitalize;
@@ -162,6 +162,8 @@
       width: 100%;
       background: #290a5c;
       position: fixed;
+      top: 0;
+      z-index: 999;
     }
     #top-btn {
       display: none;

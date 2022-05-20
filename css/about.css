@@ -1,6 +1,6 @@
 #author-img {
     height: 100%;
-    width: 300px;
+    width: 200px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   }
@@ -19,6 +19,9 @@
     justify-content: center;
     align-items: center;
   }
+  .intro {
+    margin-top: 3em;
+  }
   
   /* ################### TEXT #################### */
   h1,
@@ -34,6 +37,39 @@
   .about-text {
     font-size: 20px;
     margin-top: 3rem;
-    font-family: 'Lora', serif;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
   }
-  
+
+
+  /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 1200px #################### */
+@media screen and (max-width: 1200px) {
+
+ 
+  }
+}
+
+  /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 960px #################### */
+  @media screen and (max-width: 960px) {
+
+  }
+
+/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 768px #################### */
+@media screen and (max-width:768px) {
+  .about-row {
+    flex-direction: column;
+  }
+  .intro h1, h2 {
+    text-align: center;
+  }
+}
+
+/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 460px #################### */
+@media screen and (max-width: 460px) {
+
+}
+
+/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 279px #################### */
+@media screen and (max-width: 279px) {
+
+}
