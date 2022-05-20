@@ -21,7 +21,7 @@
   <title>Details | Blog</title>
 
 </head>
-    <body id="body">
+    <body>
  <!-- ################### HEADER #################### -->
       <div class="min-height">
       <header>
@@ -56,17 +56,19 @@
 
       <!-- ################### MAIN #################### -->
       <main>
-          <div class="loader-container">
-            <div class="loader"></div>
+        <div class="loader-wrapper">
+          <div class="loader"></div>
+        </div>
             <div class="blog-content-container"></div>
             <div class="backdrop"></div>
             <div class="modal">
               <img class="modal-img" alt="details images">
             </div>
-          </div>
       </main>
 
-      <a href="#body" id="top-btn" title="Go to Top">Top</a>
+      <button class="arrow-up">
+        <i class="fa fa-chevron-up"></i>
+      </button>
     </div>
 
      <!-- ################### FOOTER #################### -->
@@ -83,6 +85,7 @@
       <script src="js/components.js/hamburger.js"></script>
       <script src="js/details.js"></script>
       <script src="js/components.js/modal.js"></script>
+      <script src="js/components.js/arrow-up.js"></script>
 
     </body>
 </html>

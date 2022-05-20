@@ -20,6 +20,11 @@
   scroll-behavior: smooth;
   font-family: Nunito, sans-serif;
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 
 /* ################### LOADER #################### */
@@ -31,27 +36,39 @@
   justify-content: center;
   align-items: center;
 }
+/*loading*/
 .loader {
-  margin: 20vh 20vh auto;
-  text-align: center;
-  width: 48px;
-  height: 48px;
-  border: 5px dotted rgb(46, 44, 44);
+  border: 14px solid rgb(240, 240, 240);
   border-radius: 50%;
+  border-top: 14px solid #290a5c;
+  width: 90px;
+  height: 90px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
   display: inline-block;
   position: relative;
-  box-sizing: border-box;
-  animation: rotation 2s linear infinite;
+  margin-top: 100px;
 }
 
-@keyframes rotation {
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
-} 
+}
+
 
 .min-height {
   min-height: 100vh;
@@ -66,6 +83,7 @@ body {
 main {
   margin: 0 auto;
   max-width: 1200px;
+  width: 80%;
 }
 
 
@@ -92,12 +110,9 @@ main {
   margin-top: -9em;
 }
 
-#top-btn {
-  font-weight: bold;
-  color: #fefe00;
+/* #top-btn {
   padding: 8px 8px;
   background-color: #290a5c;
-  text-decoration: none;
   position: fixed;
   bottom: 10em;
   right: 10px;
@@ -107,12 +122,39 @@ main {
 #top-btn:hover {
   color: #290a5c;
   background-color: #ffe1e0;
+} */
+.arrow-up {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 15px;
+  position: fixed;
+  z-index: 9990;
+  right: 25px;
+  bottom: 20px;
+  display: none;
+  visibility: hidden;
+  overflow: hidden;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+  text-align: center;
+  opacity: 0;
+  color: #290a5c;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  background-color: white;
 }
-
+.arrow-up.is-block {
+  display: block;
+}
+.arrow-up.is-opacity {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* ################### FOOTER #################### */
 footer {
-  margin-top: 9em;
+  margin-top: auto;
 }
 .footer_container {
   display: flex;
@@ -123,6 +165,7 @@ footer {
   width: 100%;
   background-color: #290a5c;
   bottom: 0;
+  margin-top: 50px;
 }
 
 span a {
@@ -216,6 +259,7 @@ textarea::-webkit-scrollbar {
   cursor: pointer;
   border-radius: 3px;
   border: 3px solid #fff;
+  /* margin-left: 9rem; */
 }
 
 #contactForm input[type="submit"]:hover {

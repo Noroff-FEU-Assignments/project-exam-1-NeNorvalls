@@ -20,7 +20,7 @@
 
 .details-img {
   display: block;
-  width: 60%;
+  max-width: 800px;
   max-height: 450px;
   object-fit: cover;
   margin: auto;

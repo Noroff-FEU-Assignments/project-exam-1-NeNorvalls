@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
    
    <!-- ################### HOTJAR #################### -->
    <script>
@@ -17,11 +18,11 @@
         a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-    
+
     <title>Home | Blog</title>
 
   </head>
-      <body id="body">
+      <body>
 
          <!-- ############# HEADER #################### -->
         <div class="min-height">
@@ -94,7 +95,9 @@
           <a id="view-btn" class="index-btn" href="blog.html">View More</a>
         </div>
       
-        <a href="#body" id="top-btn" title="Go to Top">Top</a>
+        <button class="arrow-up">
+          <i class="fa fa-chevron-up"></i>
+        </button>
       
          <!-- ################### FOOTER #################### -->
         <footer>
@@ -112,6 +115,7 @@
         <script src="/js/components.js/carousel.js"></script>
         <script src="/js/components.js/hamburger.js"></script>
         <script src="js/components.js/latest-mq.js"></script>
+        <script src="js/components.js/arrow-up.js"></script>
       
       </body>
 </html>
