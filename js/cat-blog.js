@@ -12,7 +12,10 @@ async function fetchBlogs(url) {
     const blogs = await response.json();
     console.log(blogs);
     createBlogs(blogs);
-    createDropdown();
+    // no need to display the view more button 
+    if(blogs.length < 10) {
+      viewMoreBtn.style.display = "none";
+    }
   } catch (error) {
     console.log(error);
     loader.classList.remove("loader");
@@ -48,19 +51,7 @@ viewMoreBtn.onclick = function () {
   viewMoreBtn.style.display = "none";
 };
 
-function createDropdown() {
-  categoryDropdown.innerHTML += `
-                <label class="dropdown">
-                <div class="dd-button">
-                    Category
-                </div>
-                <input type="checkbox" class="dd-input" id="dropdown">
-                <ul class="dd-menu">
-                <a class="filter-link" href="cat-blog.html"><li class="filter-btn">Blog</li></a>
-                <a class="filter-link" href="cat-challenges.html"><li class="filter-btn">Challenges</li></a>
-                <a class="filter-link" href="cat-celebrations.html"><li class="filter-btn">Celebrations</li></a>
-                <a class="filter-link" href="cat-food.html"><li class="filter-btn">Food</li></a>
-                    <li class="divider"></li>
-                </ul>
-                </label>`;
+// no need to display the view more button 
+if(blog.length < 9) {
+  viewMoreBtn.style.display = "none";
 }

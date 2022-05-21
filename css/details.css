@@ -18,10 +18,14 @@
   margin-bottom: 2rem;
 }
 
+.category-info {
+  margin-top: 15px;
+  color: rgb(238, 102, 87);
+}
+
 .details-img {
   display: block;
   max-width: 800px;
-  max-height: 450px;
   object-fit: cover;
   margin: auto;
   cursor: pointer;

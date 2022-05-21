@@ -29,7 +29,6 @@ body {
 
 /* ################### LOADER #################### */
 .loader-wrapper {
-  /* height: 100vh; */
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -38,6 +37,7 @@ body {
 }
 /*loading*/
 .loader {
+  margin-bottom: 100vh;
   border: 14px solid rgb(240, 240, 240);
   border-radius: 50%;
   border-top: 14px solid #290a5c;
@@ -82,7 +82,7 @@ body {
 /* ################### GENERAL LAYOUT STYLE #################### */
 main {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 960px;
   width: 80%;
 }
 
@@ -101,7 +101,7 @@ main {
 }
 
 /* ################### HERO HOMEPAGE #################### */
-.bg-text, .bg-text span {
+p.bg-text, .bg-text span {
   font-family: 'Noto Serif', serif;
   color: #290a5c;
   font-size: 36px;
@@ -283,6 +283,9 @@ textarea::-webkit-scrollbar {
   /* add some space to the dropdown etc. */
   .category-title, .dd-button, .dd-menu {
     margin: 10px 0 0 30px;
+  }
+  p.bg-text, .bg-text span {
+    font-size: 22px;
   }
 }
 

@@ -12,6 +12,10 @@ async function fetchBlogs(url) {
     const blogs = await response.json();
     console.log(blogs);
     createBlogs(blogs);
+    // no need to display the view more button 
+    if(blogs.length < 10) {
+      viewMoreBtn.style.display = "none";
+    }
   } catch (error) {
     console.log(error);
     loader.classList.remove("loader");
@@ -19,6 +23,7 @@ async function fetchBlogs(url) {
     viewMoreBtn.style.display = "none";
   }
 }
+
 
 fetchBlogs(url);
 
@@ -45,3 +50,4 @@ viewMoreBtn.onclick = function () {
   fetchBlogs(page);
   viewMoreBtn.style.display = "none";
 };
+

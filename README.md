@@ -105,33 +105,29 @@ Details Page
 
 Feedback:
 
-4. might be an idea to have the same margin on each page to
-   on the blog page, no need for paddings.
-   if you want paddings, put the padding on the parent element, col div- I noticed you have paddings on the image here
-   also. when the loading indicator is displayed, I would remove all the page elements the button,
-   maybe make the footer stick to the bottom, below the fold
+4.  might be an idea to have the same margin on each page to
+    on the blog page, no need for paddings.
+    if you want paddings, put the padding on the parent element, col div- I noticed you have paddings on the image here
+    also. when the loading indicator is displayed, I would remove all the page elements the button,
+    maybe make the footer stick to the bottom, below the fold
 
-5. When I filter the blogs by "Challenges", "Celebrations" and "Foods" The "View more" button is misplaced, seems to happen every time there's an odd number off responses from the API? Like 3, 5 and 7 replies
-   This is nitpicky On the last page of "Latest posts" There's some shadow-effect that seems a tad out of place? (Image 1)
-   On the "About" and "Contact" Page, the footer seems to be floating away from the bottom of the screen, there's also a small typo in the "Contact" page where is says "inn" instead of "in"!
-   I see that on the front page, you can click directly on the image/text wherever in the box to enter the detailed pages, it would be great if this was the deal for the "view more" page as well
+5.  This is nitpicky On the last page of "Latest posts" There's some shadow-effect that seems a tad out of place? (Image 1)
+    I see that on the front page, you can click directly on the image/text wherever in the box to enter the detailed pages, it would be great if this was the deal for the "view more" page as well
 
-6. I'm not the sharpest tool in the box when it comes to design, but my 50 cent regarding the design for your detailed blog posts are;
-   Having all elements (Image, title, category, body text, author and date) at the same width helps unify the page (Image 2)
-   The "Autor" text and your name is contracting a bit much compared to what I usually see in similar situations
-   The "Date" is a tad hard to understand
-   An option to go back to all blogs (Either via a back button or Breadcrumb, or something similar!)
+6.  I'm not the sharpest tool in the box when it comes to design, but my 50 cent regarding the design for your detailed blog posts are;
+    Having all elements (Image, title, category, body text, author and date) at the same width helps unify the page (Image 2)
+    The "Autor" text and your name is contracting a bit much compared to what I usually see in similar situations
+    The "Date" is a tad hard to understand
+    An option to go back to all blogs (Either via a back button or Breadcrumb, or something similar!)
 
-7. contact us footer on mobile its looks like you forgot to remove the margin bottom
+7.  contact us footer on mobile its looks like you forgot to remove the margin bottom
 
-8. and when i wright name ect, i dont get wrong message on all
+8.  and when i wright name ect, i dont get wrong message on all
 
-9. have some problems with the modal on desktop can not click my self out, just if am all the way up to the left
+9.  have some problems with the modal on desktop can not click my self out, just if am all the way up to the left
 
 10. i would have some margin between the text and the image
 
 11. when the desktop gets big the "top" button and the image gets oversize, maybe some max width there ?
 
 12. margin on text and the h1 have some issues
-
-13. It looks good! There is good contrast in the colours and a good layout. I checked it on mobile view, and there are some bugs there. The mobile nav overshadows the top part of the pages, so some of the headlines are disappearing behind the nav. I would also add some side padding on the text on the blogposts, and add validation messages on the contact form to specify all the inputs that are missing. If possible, I would also format the publishing date on the blog post to look prettier, but you might not be allowed to use any external frameworks(?). But if you can, I'd recommend moment.js Other than that it's a responsive page and it is easy to navigate around it which is good!
