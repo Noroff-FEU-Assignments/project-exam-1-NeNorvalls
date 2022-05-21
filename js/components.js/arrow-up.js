@@ -26,7 +26,7 @@ window.onload = function() {
     }
 
     const scrollToTop = () => {
-         intervalId = setInterval(scrollStep, 8.36);
+         intervalId = setInterval(scrollStep, 12);
     }
 
     // Event listeners
