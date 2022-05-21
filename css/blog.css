@@ -141,6 +141,13 @@
   label.dropdown {
     margin-top: 15px;
   }
+  .blog-title {
+    max-width: 300px;
+  }
+  /* lessen the margin on the main content */
+  main {
+     width: 100% !important;
+  }
 }
 
   /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 960px #################### */
@@ -152,7 +159,23 @@
 @media screen and (max-width:768px) {
   /* one column layout */
   .column {
+    width: 95%;
+    float: none;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .blog-title {
+    font-size: 20px;
+    max-width: 400px;
+  }
+  .bg-img {
     width: 100%;
+  }
+  .dd-button {
+    margin-left: -10px;
+  }
+  #view-btn, #view-btn-2 {
+    margin-top: 30px;
   }
 }
 
@@ -161,6 +184,7 @@
   /* make the blog title responsive */
   .blog-title {
     max-width: 300px;
+    font-size: 16px;
   }
   /* make the blog bg img responsive */
   .bg-img {
@@ -170,7 +194,9 @@
 
 /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 279px #################### */
 @media screen and (max-width: 279px) {
-
+  .blog-title {
+    max-width: 200px;
+  }
 }
 
 

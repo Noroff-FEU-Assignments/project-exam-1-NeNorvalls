@@ -41,8 +41,14 @@ function createHTML(blog) {
                                 </div>
                                 <div class="content-info-container info-below">
                                   <p><span class="content-info"><span id="author">Author: </span><span id="author-name">${blog._embedded.author[0].name}</span></span></p>
-                                  <p><span class="content-info">Date: ${blog.date.date}</span></p>
+                                  <p><span class="content-info">Date: ${blog.modified_gmt}</span></p>
                                 </div>`;
+
+                                // const date = new Date(Date.UTC(blog.))
+
+                                // const options = { weekday: "shot", year: "numeric", month: "short", day: "numeric" };
+
+                                // date.toLocaleString(no-NO, options);
 
   console.log(blog);
 }

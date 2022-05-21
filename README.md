@@ -105,14 +105,7 @@ Details Page
 
 Feedback:
 
-4.  might be an idea to have the same margin on each page to
-    on the blog page, no need for paddings.
-    if you want paddings, put the padding on the parent element, col div- I noticed you have paddings on the image here
-    also. when the loading indicator is displayed, I would remove all the page elements the button,
-    maybe make the footer stick to the bottom, below the fold
-
-5.  This is nitpicky On the last page of "Latest posts" There's some shadow-effect that seems a tad out of place? (Image 1)
-    I see that on the front page, you can click directly on the image/text wherever in the box to enter the detailed pages, it would be great if this was the deal for the "view more" page as well
+5.  I see that on the front page, you can click directly on the image/text wherever in the box to enter the detailed pages, it would be great if this was the deal for the "view more" page as well
 
 6.  I'm not the sharpest tool in the box when it comes to design, but my 50 cent regarding the design for your detailed blog posts are;
     Having all elements (Image, title, category, body text, author and date) at the same width helps unify the page (Image 2)
