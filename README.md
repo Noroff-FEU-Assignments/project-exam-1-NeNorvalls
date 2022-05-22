@@ -75,29 +75,11 @@ My own list:
 - You can make your form validation more simple by using HTML attributes
 - You can filter without going to another page by re-rendering your HTML
   responsiveness
-  header
   css of each pages
   contact design
   xd redesign
   send for testing
   report
-
-<!-- ################### SERIOUS FIXING  ####################  -->
-
-About Page
-
-1. Image is not responsive
-2. Text responsiveness on 800px - down 270px
-3. Header Container
-
-Contact Page
-
-1. Submit Button is not centered in smaller devices
-
-Details Page
-
-1. Text need margin for responsiveness
-2. Title font-size need adjustment for responsiveness
 
 <!-- ################### Later Fixing  ####################  -->
 
@@ -105,22 +87,34 @@ Details Page
 
 Feedback:
 
-5.  I see that on the front page, you can click directly on the image/text wherever in the box to enter the detailed pages, it would be great if this was the deal for the "view more" page as well
-
-6.  I'm not the sharpest tool in the box when it comes to design, but my 50 cent regarding the design for your detailed blog posts are;
-    Having all elements (Image, title, category, body text, author and date) at the same width helps unify the page (Image 2)
-    The "Autor" text and your name is contracting a bit much compared to what I usually see in similar situations
+6.  detailed blog posts are;
     The "Date" is a tad hard to understand
-    An option to go back to all blogs (Either via a back button or Breadcrumb, or something similar!)
 
-7.  contact us footer on mobile its looks like you forgot to remove the margin bottom
+7.  and when i wright name ect, i dont get wrong message on all
 
-8.  and when i wright name ect, i dont get wrong message on all
+9.  when the desktop gets big the "top" button and the image gets oversize, maybe some max width there ?
 
-9.  have some problems with the modal on desktop can not click my self out, just if am all the way up to the left
+10. When I enter something in the contact form that is not valid and press send, the form updates and my previous input is lost.
+    form.onsubmit = (event) => {
+    event.preventDefault();
+    }
+    Consider using that code to avoid the reset
+    But then of course you would have to rewrite some of what you have done. Just a tip.
+    Maybe not so much rewriting btw. Should work just to call the function you already have inside form.onsubmit
 
-10. i would have some margin between the text and the image
+17.contact form.
+It seems like i have to enter first and last name to make it accept my request. And also, i did not get any success feedback from it so i don`t know if i have submittet the form or not.
 
-11. when the desktop gets big the "top" button and the image gets oversize, maybe some max width there ?
+18. Landing Page (Home):
+    Another thing is the "take me to the top" button, it seems somewhat unecessary because of how small the landing page is, its faster for me to use the scroll wheel to move my self up to the top of the page rather than move my mouse down right and click the button (so eigther maybe remove it or have it right above the social media icons).
 
-12. margin on text and the h1 have some issues
+Contact:
+"placeholder" in place that dissapear when somebody start writing in information this can cause some (mostly elderly) people to forget what information was needed of them so they will have to delete the already written information and re-read what was required of them to write. For this i would suggest you have a "labels" above the input field that do not dissapear once somebody starts writing (you could also make it an animation were once they press on the input field the placeholder transforms into a label and moves from the input field to the top of the input field.
+
+19. you get a scroll bar appear on it at certain screen sizes.
+    On your nav bar I would add something to tell you what page your currently on such as making the link a different colour or just having it set to your hover state.
+    Its nice your filter works but could you make it so it doesn't reload the page when you change it, and that the current selected category is the one that is shown. why not add an event listener to the selector that calls the api with the url address correlating to that, and redraws the posts on the page. with your url + &categories= ids, you can call the api for certain results so just fill the option with ids for there values. I actually do an initial call that grabs all the categories on my page and creates the filter options
+
+20. if your just passing a url into you page creation function you just add the event listener to the select to take the value make a new url and run it again
+    yeah your using fetchBlogs(url), so you can just run it with the new url should be pretty simple to setup
+    you can hard code the filter,

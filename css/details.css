@@ -12,6 +12,13 @@
   font-size: 2.5em;
 }
 
+a.back-to-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #290a5c;
+  border-bottom: 1.6px solid #290a5c;
+}
+
 .content-info-container {
   margin: 0 auto;
   margin-bottom: 2rem;

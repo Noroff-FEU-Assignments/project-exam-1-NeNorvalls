@@ -24,6 +24,10 @@
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
+.details-link {
+  cursor: pointer;
+}
+
 /* ################### TITLE #################### */
 .title-container {
   display: flex;
@@ -38,17 +42,14 @@
   font-family: 'Noto Serif', serif;
   color: #290a5c;
   letter-spacing: 1px;
-  max-width: 500px;
+  width: 100%;
+  max-width: 432px;
   margin: 0 auto;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.category-title {
-  letter-spacing: 1px;
-  font-family: 'Noto Serif', serif;
-  color:#290a5c;
-}
+
 .blog-category {
   color:rgb(238, 102, 87);
   font-weight: bold;
@@ -134,13 +135,6 @@
 /* RESPONSIVENESS */
 /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 1200px #################### */
 @media screen and (max-width: 1200px) {
-  /* add some space to the dropdown etc. */
-  .category-title, .dd-button, .dd-menu {
-    margin: 10px 0 0 30px;
-  }
-  label.dropdown {
-    margin-top: 15px;
-  }
   .blog-title {
     max-width: 300px;
   }
@@ -183,7 +177,7 @@
 @media screen and (max-width: 460px) {
   /* make the blog title responsive */
   .blog-title {
-    max-width: 300px;
+    max-width: 250px;
     font-size: 16px;
   }
   /* make the blog bg img responsive */

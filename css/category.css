@@ -1,7 +1,20 @@
 /* ################### DROP-DOWN LIST CATEGORY #################### */
+.category-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
 .dropdown {
   display: inline-block;
   position: relative;
+}
+
+.category-title {
+  margin-top: 15px;
+  letter-spacing: 1px;
+  font-family: 'Noto Serif', serif;
+  color:#290a5c;
 }
 
 .dd-button {
@@ -83,4 +96,9 @@
 .dd-menu li.divider {
   padding: 0;
   border-bottom: 1px solid #fff;
+}
+
+/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 768px #################### */
+@media screen and (max-width:768px) {
+
 }

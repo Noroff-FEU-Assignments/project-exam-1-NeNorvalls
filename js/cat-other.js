@@ -1,6 +1,6 @@
 const url =
-  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=17&categories_exclude=18,19,25&acf_format=standard&orderby=date&_embed";
-const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=17&categories_exclude=18,19,25&acf_format=standard&_embed&page=2";
+  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=27&categories_exclude=18,19,25&acf_format=standard&orderby=date&_embed";
+const page = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=27&categories_exclude=18,19,25&acf_format=standard&_embed&page=2";
 const blogContainer = document.querySelector(".blog-container");
 const loader = document.querySelector(".loader");
 const viewMoreBtn = document.querySelector("#view-btn");
@@ -32,16 +32,16 @@ function createBlogs(blogpost) {
   blogpost.forEach(function (blog) {
     blogContainer.innerHTML += `
         
-        <div class="column">
-        <div class="bg-img" style="background-image: url(${blog.acf.images})"></div>
-            <div class="title-container">
-                <h2 class="blog-title">${blog.title.rendered}</h2>
-                <p class="blog-category">Category: ${blog._embedded["wp:term"][0][0].name}</p>
-                <a href="details.html?id=${blog.id}" id="readmore-btn">Read more</a>
-                <p>
-            </div>
-
+    <div class="column">
+    <a href="details.html?id=${blog.id}" class="details-link bg-img" style="background-image: url(${blog.acf.images})"></a>
+      
+        <div class="title-container">
+        <a href="details.html?id=${blog.id}" class="details-link"><h2 class="blog-title">${blog.title.rendered}</h2></a>
+            <p class="blog-category">Category: ${blog._embedded["wp:term"][0][0].name}</p>
+            <a href="details.html?id=${blog.id}" id="readmore-btn">Read more</a>
         </div>
+
+    </div>
         
         `;
   });

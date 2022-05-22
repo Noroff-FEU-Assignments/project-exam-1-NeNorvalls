@@ -58,7 +58,7 @@
   .about-row {
     flex-direction: column;
   }
-  .intro h1, h2 {
+  .intro h1, #about-h2 {
     text-align: center;
   }
 }

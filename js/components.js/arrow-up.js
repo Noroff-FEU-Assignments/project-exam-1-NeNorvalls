@@ -22,11 +22,11 @@ window.onload = function() {
         if (window.pageYOffset === 0) {
             clearInterval (intervalId);
         }
-        window.scroll(0, window.pageYOffset - 400);
+        window.scroll(0, window.pageYOffset - 999999);
     }
 
     const scrollToTop = () => {
-         intervalId = setInterval(scrollStep, 1);
+         intervalId = setInterval(scrollStep, 8.36);
     }
 
     // Event listeners

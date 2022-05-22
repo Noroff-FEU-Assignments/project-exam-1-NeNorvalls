@@ -62,7 +62,8 @@
     transition: 0.7s ease;
   }
   
-  .nav-link:hover {
+.active,
+ .nav-link:hover {
     color: #fefe00;
     text-decoration: underline;
   }
