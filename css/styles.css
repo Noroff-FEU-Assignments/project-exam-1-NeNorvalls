@@ -204,6 +204,10 @@ span a:hover {
   main {
     width: 90%;
   }
+  .arrow-up.is-opacity {
+    visibility: hidden;
+  }
+
 }
 
 /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 460px #################### */

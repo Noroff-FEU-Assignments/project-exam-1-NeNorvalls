@@ -74,46 +74,28 @@ My own list:
 
 - You can make your form validation more simple by using HTML attributes
 - You can filter without going to another page by re-rendering your HTML
-  responsiveness
-  css of each pages
-  contact design
   xd redesign
-  send for testing
   report
 
 <!-- ################### Later Fixing  ####################  -->
 
-1. small feature- I notice the g breaks the underline on the blog nav field, maybe use a border bottom instead
-
-Feedback:
-
 6.  detailed blog posts are;
     The "Date" is a tad hard to understand
 
-7.  and when i wright name ect, i dont get wrong message on all
-
-9.  when the desktop gets big the "top" button and the image gets oversize, maybe some max width there ?
-
-10. When I enter something in the contact form that is not valid and press send, the form updates and my previous input is lost.
+7.  When I enter something in the contact form that is not valid and press send, the form updates and my previous input is lost.
     form.onsubmit = (event) => {
     event.preventDefault();
     }
     Consider using that code to avoid the reset
     But then of course you would have to rewrite some of what you have done. Just a tip.
     Maybe not so much rewriting btw. Should work just to call the function you already have inside form.onsubmit
+    It seems like i have to enter first and last name to make it accept my request. And also, i did not get any success feedback from it so i don`t know if i have submittet the form or not.
+    "placeholder" in place that dissapear when somebody start writing in information this can cause some (mostly elderly) people to forget what information was needed of them so they will have to delete the already written information and re-read what was required of them to write. For this i would suggest you have a "labels" above the input field that do not dissapear once somebody starts writing (you could also make it an animation were once they press on the input field the placeholder transforms into a label and moves from the input field to the top of the input field.
 
-17.contact form.
-It seems like i have to enter first and last name to make it accept my request. And also, i did not get any success feedback from it so i don`t know if i have submittet the form or not.
-
-18. Landing Page (Home):
-    Another thing is the "take me to the top" button, it seems somewhat unecessary because of how small the landing page is, its faster for me to use the scroll wheel to move my self up to the top of the page rather than move my mouse down right and click the button (so eigther maybe remove it or have it right above the social media icons).
-
-Contact:
-"placeholder" in place that dissapear when somebody start writing in information this can cause some (mostly elderly) people to forget what information was needed of them so they will have to delete the already written information and re-read what was required of them to write. For this i would suggest you have a "labels" above the input field that do not dissapear once somebody starts writing (you could also make it an animation were once they press on the input field the placeholder transforms into a label and moves from the input field to the top of the input field.
-
-19. you get a scroll bar appear on it at certain screen sizes.
-    On your nav bar I would add something to tell you what page your currently on such as making the link a different colour or just having it set to your hover state.
-    Its nice your filter works but could you make it so it doesn't reload the page when you change it, and that the current selected category is the one that is shown. why not add an event listener to the selector that calls the api with the url address correlating to that, and redraws the posts on the page. with your url + &categories= ids, you can call the api for certain results so just fill the option with ids for there values. I actually do an initial call that grabs all the categories on my page and creates the filter options
+19.9. when the desktop gets big the "top" button and the image gets oversize, maybe some max width there ?
+you get a scroll bar appear on it at certain screen sizes.
+On your nav bar I would add something to tell you what page your currently on such as making the link a different colour or just having it set to your hover state.
+Its nice your filter works but could you make it so it doesn't reload the page when you change it, and that the current selected category is the one that is shown. why not add an event listener to the selector that calls the api with the url address correlating to that, and redraws the posts on the page. with your url + &categories= ids, you can call the api for certain results so just fill the option with ids for there values. I actually do an initial call that grabs all the categories on my page and creates the filter options
 
 20. if your just passing a url into you page creation function you just add the event listener to the select to take the value make a new url and run it again
     yeah your using fetchBlogs(url), so you can just run it with the new url should be pretty simple to setup
