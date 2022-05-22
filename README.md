@@ -92,9 +92,6 @@ My own list:
     It seems like i have to enter first and last name to make it accept my request. And also, i did not get any success feedback from it so i don`t know if i have submittet the form or not.
     "placeholder" in place that dissapear when somebody start writing in information this can cause some (mostly elderly) people to forget what information was needed of them so they will have to delete the already written information and re-read what was required of them to write. For this i would suggest you have a "labels" above the input field that do not dissapear once somebody starts writing (you could also make it an animation were once they press on the input field the placeholder transforms into a label and moves from the input field to the top of the input field.
 
-19.9. when the desktop gets big the "top" button and the image gets oversize, maybe some max width there ?
-you get a scroll bar appear on it at certain screen sizes.
-On your nav bar I would add something to tell you what page your currently on such as making the link a different colour or just having it set to your hover state.
 Its nice your filter works but could you make it so it doesn't reload the page when you change it, and that the current selected category is the one that is shown. why not add an event listener to the selector that calls the api with the url address correlating to that, and redraws the posts on the page. with your url + &categories= ids, you can call the api for certain results so just fill the option with ids for there values. I actually do an initial call that grabs all the categories on my page and creates the filter options
 
 20. if your just passing a url into you page creation function you just add the event listener to the select to take the value make a new url and run it again
