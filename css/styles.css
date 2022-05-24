@@ -105,6 +105,7 @@ main {
 
 /* ################### HERO HOMEPAGE #################### */
 p.bg-text, .bg-text span {
+  text-shadow: 1px 1px 1px white;
   font-family: 'Noto Serif', serif;
   color: #1e005c;
   font-size: 36px;
