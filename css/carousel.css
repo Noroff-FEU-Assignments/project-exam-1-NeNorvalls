@@ -130,7 +130,7 @@ h4 {
 .map button:hover,
 .map button.active {
   border: 3px solid #1e005c;
-  background: #e6fd14;
+  background: white;
 }
 
 .map button.fourth, button.fifth,

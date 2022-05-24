@@ -60,9 +60,9 @@
 /* buttons */
 #view-btn,
 #view-btn-2 {
-  background: #e6fd14;
+  background:  white;
   border-radius: 999px;
-  border: 2px solid #1e005c;
+  border: 3px solid #1e005c;
   box-shadow: #290a5c 0 10px 20px -10px;
   box-sizing: border-box;
   color: rgb(238, 102, 87);
