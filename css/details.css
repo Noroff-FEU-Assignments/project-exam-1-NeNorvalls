@@ -8,15 +8,15 @@
   text-align: center;
   font-family: 'Noto Serif', serif;
   letter-spacing: 1px;
-  color: #290a5c;
+  color: #1e005c;
   font-size: 2.5em;
 }
 
 a.back-to-btn {
   margin-top: 10px;
   cursor: pointer;
-  color: #290a5c;
-  border-bottom: 1.6px solid #290a5c;
+  color: #1e005c;
+  border-bottom: 1.6px solid #1e005c;
 }
 
 .content-info-container {

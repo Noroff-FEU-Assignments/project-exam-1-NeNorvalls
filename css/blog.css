@@ -40,7 +40,7 @@
 }
 .blog-title {
   font-family: 'Noto Serif', serif;
-  color: #290a5c;
+  color: #1e005c;
   letter-spacing: 1px;
   width: 100%;
   max-width: 432px;
@@ -60,9 +60,9 @@
 /* buttons */
 #view-btn,
 #view-btn-2 {
-  background: #ffe1e0;
+  background: #e6fd14;
   border-radius: 999px;
-  border: 2px solid #290a5c;
+  border: 2px solid #1e005c;
   box-shadow: #290a5c 0 10px 20px -10px;
   box-sizing: border-box;
   color: rgb(238, 102, 87);
@@ -90,9 +90,9 @@
 
 #view-btn:hover,
 #view-btn-2:hover {
-  color: #290a5c;
-  background-color: #ffe1e0;
-  border: 2px solid #290a5c;
+  color: #1e005c;
+  background-color: #fedcd0;
+  border: 2px solid #1e005c;
   transition: all .2s ease-in;
 }
 
@@ -121,10 +121,10 @@
 
 #readmore-btn {
   margin-top: 10px;
-  border: 3px solid #290a5c;
+  border: 3px solid #1e005c;
   padding: 8px 8px;
   font-weight: bold;
-  color: #290a5c;
+  color: #1e005c;
 }
 #readmore-btn:hover {
   transition: all 0.1s ease-in;

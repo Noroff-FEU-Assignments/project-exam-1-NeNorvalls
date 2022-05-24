@@ -102,3 +102,16 @@ Its nice your filter works but could you make it so it doesn't reload the page w
 As for the category. It's working, but as you say it's loading a different page, but you want one page that loads different data. This is the advantage of using parameters for functions. Instead of replicating the same code in multiple js files, all you need is to change the category parameter in the url each time you call the API from the one page.
 
 ####################error from Validator ##################
+Appealing design
+Masters relevant tools, techniques and expressions for developing dynamic web solutions in accordance with guidelines for universal design
+Maximum score 3
+Technically efficient
+Can apply vocational knowledge to practical problems within the field of study with focus on the development of dynamic web solutions
+Maximum score 4
+WCAG guidelines, content management and SEO
+Masters relevant tools, techniques and expressions for developing dynamic web solutions in accordance with guidelines for universal design
+Maximum score 2
+Report
+Can study and document his/her own project and identify issues and what measures need to be implemented
+Maximum score 1
+Fix meta name and keyword

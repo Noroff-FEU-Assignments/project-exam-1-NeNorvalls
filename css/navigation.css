@@ -31,7 +31,7 @@
   }
   
   header {
-    background-color: #290a5c;;
+    background-color: #1e005c;
   }
   
   li {
@@ -65,7 +65,7 @@
   
 .active,
  .nav-link:hover {
-    color: #fefe00;
+    color: #e6fd14;
     text-decoration: underline;
   }
   

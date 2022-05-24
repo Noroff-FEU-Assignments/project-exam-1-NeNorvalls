@@ -14,7 +14,7 @@
   margin-top: 15px;
   letter-spacing: 1px;
   font-family: 'Noto Serif', serif;
-  color:#290a5c;
+  color:#1e005c;
 }
 
 .dd-button {
@@ -22,8 +22,8 @@
   border: 2px solid #fff;
   border-radius: 4px;
   padding: 10px 30px 10px 20px;
-  background-color: #290a5c;
-  color: #fefe00;
+  background-color: #1e005c;
+  color: #e6fd14;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
@@ -44,7 +44,7 @@
 
 .dd-button:hover {
   background-color: transparent;
-  border: 2px solid #290a5c;
+  border: 2px solid #1e005c;
   color: #000;
 }
 
