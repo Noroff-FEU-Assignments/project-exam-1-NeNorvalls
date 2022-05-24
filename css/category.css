@@ -13,8 +13,8 @@
 .category-title {
   margin-top: 15px;
   letter-spacing: 1px;
-  font-family: 'Noto Serif', serif;
-  color:#1e005c;
+  font-family: "Noto Serif", serif;
+  color: #1e005c;
 }
 
 .dd-button {
@@ -96,9 +96,4 @@
 .dd-menu li.divider {
   padding: 0;
   border-bottom: 1px solid #fff;
-}
-
-/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 768px #################### */
-@media screen and (max-width:768px) {
-
 }

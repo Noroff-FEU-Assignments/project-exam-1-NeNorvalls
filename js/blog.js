@@ -1,7 +1,10 @@
 // const categoryUrl = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?/categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed";
-const page2 = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&orderby=date&_embed&page=2";
-const page3 = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&orderby=date&_embed&page=3";
+const url =
+  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed";
+const page2 =
+  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&orderby=date&_embed&page=2";
+const page3 =
+  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts/?acf_format=standard&orderby=date&_embed&page=3";
 const blogContainer = document.querySelector(".blog-container");
 const loader = document.querySelector(".loader");
 const viewBtn1Container = document.querySelector("#view-btn-1-container");
@@ -17,7 +20,7 @@ async function fetchBlogs(url) {
     console.log(blogs);
     createBlogs(blogs);
     // no need to display the view more button when there is less than 10 results
-    if(blogs.length < 10) {
+    if (blogs.length < 10) {
       viewMoreBtn.style.display = "none";
     }
   } catch (error) {

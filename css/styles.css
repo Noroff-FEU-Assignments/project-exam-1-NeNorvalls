@@ -7,14 +7,14 @@
 @import url(/css/details.css);
 @import url(/css/contact.css);
 
-
 /* ################### IMPORT FONTS ####################  */
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
 /* ################### UNIVERSAL STYLE ####################  */
-*, html { 
+*,
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -25,6 +25,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #fedcd0;
 }
 
 p {
@@ -73,13 +74,7 @@ p {
   }
 }
 
-
 .min-height {
-  min-height: 100vh;
-}
-
-body {
-  background-color: #FEDCD0;
   min-height: 100vh;
 }
 
@@ -93,7 +88,7 @@ main {
 .latest-heading {
   letter-spacing: 1px;
   color: #1e005c;
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   text-align: center;
   margin-top: 3rem;
 }
@@ -104,9 +99,10 @@ main {
 }
 
 /* ################### HERO HOMEPAGE #################### */
-p.bg-text, .bg-text span {
+p.bg-text,
+.bg-text span {
   text-shadow: 1px 1px 1px white;
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   color: #1e005c;
   font-size: 36px;
   font-weight: 500;
@@ -127,7 +123,7 @@ p.bg-text, .bg-text span {
   overflow: hidden;
   padding: 10px 13px;
   cursor: pointer;
-  transition: .15s ease-in-out;
+  transition: 0.15s ease-in-out;
   text-align: center;
   opacity: 0;
   color: #ffe1e0;
@@ -138,7 +134,7 @@ p.bg-text, .bg-text span {
 .arrow-up:hover {
   background-color: rgb(142, 24, 0);
   color: white;
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .arrow-up.is-block {
   display: block;
@@ -171,7 +167,7 @@ span a {
 }
 
 span a:hover {
-  color: #E6FD14;
+  color: #e6fd14;
 }
 
 .copy {
@@ -187,36 +183,20 @@ span a:hover {
   text-align: center;
 }
 
-
 /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 1200px #################### */
 @media screen and (max-width: 1200px) {
-  p.bg-text, .bg-text span {
+  p.bg-text,
+  .bg-text span {
     font-size: 22px;
   }
 }
 
-  /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 960px #################### */
-  @media screen and (max-width: 960px) {
-
-  }
-
 /* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 768px #################### */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   main {
     width: 90%;
   }
   .arrow-up.is-opacity {
     visibility: hidden;
   }
-
-}
-
-/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 460px #################### */
-@media screen and (max-width: 460px) {
-
-}
-
-/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 279px #################### */
-@media screen and (max-width: 279px) {
-
 }

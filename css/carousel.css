@@ -22,7 +22,6 @@ body {
 .mq-center {
   display: none;
   align-items: center;
-  display: flex;
   flex-direction: row;
   height: 100%;
   justify-content: center;
@@ -38,14 +37,12 @@ body {
   transition: all 1s ease-in-out;
 }
 
-
 .wrapper {
   display: flex;
   grid-gap: 1em;
   overflow: hidden;
   max-width: 960px;
 }
-
 
 .wrapper .inner {
   display: flex;
@@ -83,7 +80,7 @@ body {
 }
 .content h3,
 h4 {
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   letter-spacing: 1px;
   margin: 0.35em 0;
 }
@@ -125,43 +122,25 @@ h4 {
   transition: all 0.1s ease-in;
 }
 
-
-
 .map button:hover,
 .map button.active {
   border: 3px solid #1e005c;
   background: white;
 }
 
-.map button.fourth, button.fifth,
-button.sixth, button.seventh,
-button.eighth, button.ninth {
+.map button.fourth,
+button.fifth,
+button.sixth,
+button.seventh,
+button.eighth,
+button.ninth {
   display: none;
-  }
+}
 
 #carousel-link:hover {
   opacity: 0.8;
   transition: all 0.3s;
 }
-
-/* Media Query */
-/* make the carousel smaller */
-/* @media screen and (max-width: 1300px) {
-  .wrapper {
-    width: 50em;
-  }
-  .card img {
-    width: 15.8em;
-    height: 11em;
-  }
-  .card .content {
-    height: 15em;
-  }
-  .content h4 {
-    margin-top: 11em;
-    font-size: 1rem;
-  }
-} */
 
 /* Styles for the latest post on smaller screens */
 @media screen and (max-width: 960px) {

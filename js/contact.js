@@ -43,7 +43,7 @@ contactForm.addEventListener("submit", validateForm);
 contactForm.addEventListener("submit", function handleSubmit(event) {
   event.preventDefault();
   contactForm.reset();
-})
+});
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
@@ -61,7 +61,7 @@ function validateEmail(email) {
 
 function successMessage() {
   if (validateForm() === true) {
-    alert("Thank you for reaching out!")
+    alert("Thank you for reaching out!");
   }
 }
 

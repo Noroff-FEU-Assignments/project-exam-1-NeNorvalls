@@ -1,4 +1,5 @@
-const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";
+const url =
+  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";
 const page =
   "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=25&categories_exclude=18,19,17&acf_format=standard&_embed&page=2";
 const blogContainer = document.querySelector(".blog-container");
@@ -11,8 +12,8 @@ async function fetchBlogs(url) {
     const blogs = await response.json();
     console.log(blogs);
     createBlogs(blogs);
-    // no need to display the view more button 
-    if(blogs.length < 10) {
+    // no need to display the view more button
+    if (blogs.length < 10) {
       viewMoreBtn.style.display = "none";
     }
   } catch (error) {
@@ -22,7 +23,6 @@ async function fetchBlogs(url) {
     viewMoreBtn.style.display = "none";
   }
 }
-
 
 fetchBlogs(url);
 
@@ -48,4 +48,5 @@ viewMoreBtn.onclick = function () {
   fetchBlogs(page);
   viewMoreBtn.style.display = "none";
 };
+
 

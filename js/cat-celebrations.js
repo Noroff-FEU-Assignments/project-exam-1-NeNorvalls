@@ -12,8 +12,8 @@ async function fetchBlogs(url) {
     const blogs = await response.json();
     console.log(blogs);
     createBlogs(blogs);
-    // no need to display the view more button 
-    if(blogs.length < 10) {
+    // no need to display the view more button
+    if (blogs.length < 10) {
       viewMoreBtn.style.display = "none";
     }
   } catch (error) {
