@@ -114,4 +114,3 @@ Maximum score 2
 Report
 Can study and document his/her own project and identify issues and what measures need to be implemented
 Maximum score 1
-Fix meta name and keyword

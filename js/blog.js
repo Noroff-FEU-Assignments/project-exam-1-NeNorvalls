@@ -45,7 +45,6 @@ function createBlogs(blogpost) {
                 <p class="blog-category">Category: ${blog._embedded["wp:term"][0][0].name}</p>
                 <a href="details.html?id=${blog.id}" id="readmore-btn">Read more</a>
             </div>
-
         </div>
         
         `;

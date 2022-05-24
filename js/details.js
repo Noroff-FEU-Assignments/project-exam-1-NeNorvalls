@@ -1,6 +1,5 @@
 const blogContainer = document.querySelector(".blog-content-container");
 const loader = document.querySelector(".loader");
-
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -30,6 +29,7 @@ function createHTML(blog) {
   loader.classList.remove("loader");
 
   blogContainer.innerHTML = ` <h1>${blog.title.rendered}</h1>
+                                <div class="back-btn-container"><a class="back-to-btn" href="blog.html">Back to blogs</a></div>
                                 <div class="content-img-container">
                                     <img class="details-img" src="${blog.acf.images}"  onclick="openModal()" alt="${blog.title.rendered}">
                                 </div>
@@ -44,13 +44,5 @@ function createHTML(blog) {
                                   <p><span class="content-info">Date: ${blog.modified_gmt}</span></p>
                                 </div>`;
 
-                                // const date = new Date(Date.UTC(blog.))
-
-                                // const options = { weekday: "shot", year: "numeric", month: "short", day: "numeric" };
-
-                                // date.toLocaleString(no-NO, options);
-
   console.log(blog);
 }
-
-{/* <p class="content-text">${blog.content.rendered}</p> */}

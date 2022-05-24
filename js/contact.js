@@ -40,6 +40,10 @@ function validateForm(event) {
 
 contactForm.addEventListener("submit", validateForm);
 
+contactForm.addEventListener("submit", function handleSubmit(event) {
+  event.preventDefault();
+  contactForm.reset();
+})
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
@@ -54,3 +58,11 @@ function validateEmail(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
+
+function successMessage() {
+  if (validateForm() === true) {
+    alert("Thank you for reaching out!")
+  }
+}
+
+successMessage();
