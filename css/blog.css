@@ -51,7 +51,7 @@
 }
 
 .blog-category {
-  color:rgb(238, 102, 87);
+  color:rgb(142, 24, 0);
   font-weight: bold;
 }
 
@@ -128,8 +128,8 @@
 }
 #readmore-btn:hover {
   transition: all 0.1s ease-in;
-  color: rgb(238, 102, 87);
-  border-color: rgb(238, 102, 87);
+  color: rgb(142, 24, 0);
+  border-color: rgb(142, 24, 0);
 }
 
 /* RESPONSIVENESS */

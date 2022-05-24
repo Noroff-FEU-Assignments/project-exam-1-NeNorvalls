@@ -135,7 +135,7 @@ p.bg-text, .bg-text span {
   background-color: #1e005c;
 }
 .arrow-up:hover {
-  background-color: rgb(238, 102, 87);
+  background-color: rgb(142, 24, 0);
   color: white;
   transition: all .15s ease-in-out;
 }

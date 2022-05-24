@@ -146,7 +146,7 @@
       top: 70px;
       gap: 0;
       flex-direction: column;
-      background-color: #262626;
+      background-color: #1e005c;
       width: 100%;
       text-align: center;
       transition: 0.3s;
@@ -162,7 +162,7 @@
     /* make the navbar fixed as an alternative to the top-btn */
     .navbar {
       width: 100%;
-      background: #290a5c;
+      background: #1e005c;
       position: fixed;
       top: 0;
       z-index: 999;
