@@ -1,5 +1,4 @@
-const url =
-  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";
+const url = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=25&categories_exclude=18,19,17&acf_format=standard&orderby=date&_embed";
 const page =
   "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?categories=25&categories_exclude=18,19,17&acf_format=standard&_embed&page=2";
 const blogContainer = document.querySelector(".blog-container");

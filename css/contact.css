@@ -24,6 +24,10 @@ input:focus {
   margin: 15px 30px 15px 30px;
 }
 
+.success-wrapper {
+  display: none;
+}
+
 .contact-h2 {
   font-family: "Noto", serif;
   color:#290a5c;

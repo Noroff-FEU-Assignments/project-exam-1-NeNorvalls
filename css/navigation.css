@@ -3,6 +3,7 @@
     color: #fff;
     font-size: 2.5em;
     text-transform: capitalize;
+    letter-spacing: 1.3px;
   }
   #mq-logo {
     display: none;

@@ -97,3 +97,6 @@ Its nice your filter works but could you make it so it doesn't reload the page w
 20. if your just passing a url into you page creation function you just add the event listener to the select to take the value make a new url and run it again
     yeah your using fetchBlogs(url), so you can just run it with the new url should be pretty simple to setup
     you can hard code the filter,
+21. One thing that I've noticed is Nunito isn't loading to the browser so it defaults to the generic sans-serif.
+
+As for the category. It's working, but as you say it's loading a different page, but you want one page that loads different data. This is the advantage of using parameters for functions. Instead of replicating the same code in multiple js files, all you need is to change the category parameter in the url each time you call the API from the one page.

@@ -7,6 +7,7 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
+const submitBtn = document.querySelector("#submitBtn");
 
 function validateForm(event) {
   event.preventDefault();
@@ -38,6 +39,7 @@ function validateForm(event) {
 }
 
 contactForm.addEventListener("submit", validateForm);
+
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
