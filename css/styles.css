@@ -196,7 +196,8 @@ span a:hover {
   main {
     width: 90%;
   }
-  .arrow-up.is-opacity {
-    visibility: hidden;
+  .arrow-up {
+    font-size: 12px;
+  right: 6px;
   }
 }

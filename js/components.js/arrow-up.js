@@ -4,7 +4,6 @@ function scrollToTop() {
 
 window.onload = function () {
     let arrowUp = document.querySelector(".arrow-up");
-    let intervalId = 0;
   
     const toggleArrow = (e) => {
       if (window.scrollY >= 500) {
@@ -16,13 +15,6 @@ window.onload = function () {
       } else {
         arrowUp.classList.remove("is-opacity");
       }
-    };
-  
-    const scrollStep = () => {
-      if (window.pageYOffset === 0) {
-        clearInterval(intervalId);
-      }
-      window.scroll(0, window.pageYOffset - 999999);
     };
   
     // Event listeners
