@@ -17,7 +17,6 @@
   justify-content: flex-start;
   margin: 0 auto;
   margin-bottom: 7px;
-  margin-left: 15px;
 }
 
 a.back-to-btn {
@@ -104,6 +103,13 @@ span#author-name {
   }
   .blog-content-container h1 {
     margin: 30px 0 30px 0 auto;
+  }
+}
+
+/* ################### RESPONSIVENESS FOR SCREENS SMALLER THAN 768px #################### */
+@media screen and (max-width: 830px) {
+  .back-btn-container {
+    margin-left: 15px;
   }
 }
 
