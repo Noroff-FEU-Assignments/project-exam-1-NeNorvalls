@@ -25,10 +25,6 @@ window.onload = function () {
       window.scroll(0, window.pageYOffset - 999999);
     };
   
-    const scrollToTop = () => {
-      intervalId = setInterval(scrollStep, 8.36);
-    };
-  
     // Event listeners
     arrowUp.addEventListener("click", scrollToTop);
     window.addEventListener("scroll", toggleArrow);
