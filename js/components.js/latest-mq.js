@@ -1,6 +1,5 @@
 const mqInnerContainer = document.querySelector(".mq-inner");
-const mqUrl =
-  "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=6";
+const mqUrl = "https://nenorvalls.no/flower-power/nenorvalls-blog/wp-json/wp/v2/blogposts?acf_format=standard&orderby=date&_embed&per_page=6";
 
 document.addEventListener("DOMContentLoaded", () => {
   async function fetchBlogs(mqUrl) {
