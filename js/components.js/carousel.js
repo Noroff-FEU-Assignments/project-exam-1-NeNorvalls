@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     blogpost.forEach(function (blog) {
       innerContainer.innerHTML += `<a id="carousel-link" href="details.html?id=${blog.id}"
                                     <div class="card">
-                                        <img src="${blog.acf.images}">
+                                        <img src="${blog.acf.images}" alt="${blog.title.rendered}">
                                         <div class="content">
                                             <h4 class="carousel-h4">${blog.title.rendered}</h4>
                                         </div>

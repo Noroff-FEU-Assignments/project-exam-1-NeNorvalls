@@ -34,8 +34,11 @@ input:focus {
   margin: 15px 30px 15px 30px;
 }
 
-.success-wrapper {
-  display: none;
+.success {
+  color: #2eeb93;
+  padding: 10px;
+  background-color: #034426;
+  border: 0.3px solid #2eeb93;
 }
 
 .contact-h2 {

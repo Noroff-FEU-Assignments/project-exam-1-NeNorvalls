@@ -1,4 +1,5 @@
 const contactForm = document.querySelector("#contactForm");
+const successContainer = document.querySelector("#successContainer");
 const fullName = document.querySelector("#fullName");
 const fullNameError = document.querySelector("#fullNameError");
 const email = document.querySelector("#email");
@@ -36,13 +37,20 @@ function validateForm(event) {
     messageError.style.display = "block";
   }
   console.log("hello");
+
+  
+
 }
 
 contactForm.addEventListener("submit", validateForm);
 
 contactForm.addEventListener("submit", function handleSubmit(event) {
   event.preventDefault();
-  contactForm.reset();
+  if(checkLength(fullName.value, 5) && validateEmail(email.value) && checkLength(subject.value, 10) && checkLength(message.value, 25)) {
+
+    contactForm.reset();
+    successContainer.innerHTML = `<p class="success">Your message has been sent. Thank you for reaching out!</p>`
+    }
 });
 
 function checkLength(value, len) {
@@ -59,10 +67,3 @@ function validateEmail(email) {
   return patternMatches;
 }
 
-function successMessage() {
-  if (validateForm() === true) {
-    alert("Thank you for reaching out!");
-  }
-}
-
-successMessage();
