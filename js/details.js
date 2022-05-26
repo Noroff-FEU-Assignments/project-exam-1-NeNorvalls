@@ -41,7 +41,7 @@ function createHTML(blog) {
                                 </div>
                                 <div class="content-info-container info-below">
                                   <p><span class="content-info"><span id="author">Author: </span><span id="author-name">${blog._embedded.author[0].name}</span></span></p>
-                                  <p><span class="content-info">Date: ${blog.modified_gmt}</span></p>
+                                  <p><span class="content-info">Date: ${blog.modified_gmt.slice(0, -9)}</span></p>
                                 </div>`;
 
   console.log(blog);
