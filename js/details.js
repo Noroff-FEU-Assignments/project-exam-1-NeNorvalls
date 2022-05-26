@@ -46,3 +46,5 @@ function createHTML(blog) {
 
   console.log(blog);
 }
+
+// data._embedded['wp:featuredmedia'][0].alt_text

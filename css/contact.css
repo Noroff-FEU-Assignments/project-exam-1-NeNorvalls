@@ -3,15 +3,25 @@
 input {
   display: inline-block;
   border-radius: 3px;
-  border: 1px solid #fff;
   transition: 0.15s;
-  outline: none;
   padding: 8px;
 }
 
 input:focus {
   width: 200px;
   background-color: #ffe1e0;
+}
+
+.input-label {
+  display: block;
+}
+
+.input-label span {
+  z-index: 1;
+  cursor: text;
+  pointer-events: none;
+  color: #fff;
+  line-height: 17px;
 }
 
 .form-error {
@@ -54,15 +64,9 @@ input:focus {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  outline: none;
   resize: none;
   border: none;
   border-bottom: 1px solid #fff;
-}
-
-#contactForm input[type="text"]:focus {
-  border-bottom: 1px solid #fff;
-  color: #fff;
 }
 
 .submit-btn {

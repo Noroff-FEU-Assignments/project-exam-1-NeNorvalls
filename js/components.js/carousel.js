@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(blogs);
       createBlogs(blogs);
     } catch (error) {
+      loaderWrapper.classList.remove("loader");
       console.log(error);
     }
   }
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchBlogs(url);
 
   function createBlogs(blogpost) {
+    loader.classList.remove("loader");
     blogpost.forEach(function (blog) {
       innerContainer.innerHTML += `<a id="carousel-link" href="details.html?id=${blog.id}"
                                     <div class="card">
