@@ -32,5 +32,7 @@ This _Blog site_ is all about how we Filipinos in the past and the modern era. T
   - Accessibility
 - JS
   - Fetch API
+  - Js Hamburger
+  - Carousel Slider
 - Wordpress
   - Headless CMS
